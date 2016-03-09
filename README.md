@@ -10,6 +10,7 @@ File name | Content
 --------- | -------
 style | CSS3 & HTML5
 Javascript| javascript or node.js, and any other structures using js
+dejafm| some encountered issues in dejafm project& MVC generator.
 
 #Test
 
