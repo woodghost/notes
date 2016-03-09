@@ -29,7 +29,7 @@ tutorial!](https://guides.github.com/features/mastering-markdown/)
   * Item 2a
   * Item 2b
   
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](https://fleep.io/blog/wp-content/uploads/2014/07/github_icon.png)
 Format: ![Alt Text](url)
 
 
