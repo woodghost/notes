@@ -8,9 +8,11 @@ Today's task is to be familiar with markdown for the future usage.
 
 File name | Content
 --------- | -------
-style | CSS3 & HTML5
-Javascript| javascript or node.js, and any other structures using js
-dejafm| some encountered issues in dejafm project& MVC generator.
+[style.md](https://github.com/woodghost/notes/blob/master/style.md) | CSS3 & HTML5
+[Javascript.md](https://github.com/woodghost/notes/blob/master/javascript.md)| javascript or node.js, and any other structures 
+using js
+[dejafm.md](https://github.com/woodghost/notes/blob/master/dejafm.md)| some encountered issues in dejafm project& MVC generator.
+[supplement.md](https://github.com/woodghost/notes/blob/master/supplement.md)| Other CS knowledge (Updating & organising)
 
 #Test
 
