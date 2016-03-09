@@ -59,7 +59,7 @@ var tipId = 'cloth_tip_' + VIEW.models.Basic.getUserId();
      }
    }
 ```
- Try to use console.log(scroll); console.log(top, maxScroll) to 
+ Try to use `console.log(scroll)` or  `console.log(top, maxScroll)` to 
  discover what stuffs are in these arguments.(Just because the 
  function didn't come from my code :( ).
  
