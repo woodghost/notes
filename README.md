@@ -1,4 +1,4 @@
-# notes
+# Notes
 Taking notes via learning, including CSS3, HTML5, JavaScript, jQuery...(adding in process)
 
 #Guide Map
@@ -20,3 +20,38 @@ If you'd like to quote someone, use the > character before the line:
 
 > This is a quote line, 
 > - woodghost
+
+It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Markdown 
+tutorial!](https://guides.github.com/features/mastering-markdown/)
+
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+  
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+
+
+def foo():
+    if not bar:
+        return True
+        
+
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
+~~I am a demo strikethrough~~
+
+:ghost:
+
+
+
