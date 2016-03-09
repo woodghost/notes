@@ -3,8 +3,11 @@ Taking notes via learning, including CSS3, HTML5, JavaScript, jQuery...(adding i
 
 #Guide Map
 Today's task is to be familiar with markdown for the future usage.
-style------CSS3 & HTML5
-js------javascript or node.js, and any other structures using js.(Updating & organising)
+(Updating & organising)
+File name | Content
+--------- | -----------
+style | CSS3 & HTML5
+Javascript| javascript or node.js, and any other structures using js
 
 #Test
 
