@@ -46,12 +46,6 @@ var tipId = 'cloth_tip_' + VIEW.models.Basic.getUserId();
  they print or not.
  
 ```javascript
- function onBeforeLoadingNextPageClothStreet(scroll) {
-     if (els.isViewVisible && !els.isLoadingNextPageClothStreet) {
-       if (scroll) {
-         if (VIEW._BasicView.isMaxWindowScroll()) {
-           console.log(1);
-           loadingNextPageClothStreet();
          }
        } else {
          loadingNextPageClothStreet();
