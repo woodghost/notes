@@ -39,14 +39,13 @@ tutorial!](https://guides.github.com/features/mastering-markdown/)
   * Item 2b
   
 ![GitHub Logo](https://fleep.io/blog/wp-content/uploads/2014/07/github_icon.png)
-Format: ![Alt Text](url)
+<!--Format: ![Alt Text](url)  -->
 
 
 def foo():
     if not bar:
         return True
         
-
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
 - [x] list syntax required (any unordered or ordered list supported)
 - [x] this is a complete item
@@ -76,8 +75,8 @@ The table head must be snap to grid.
 ### Source code module in this project.
 
 ##### Text version notes here, some guides, tips, etc.
-```text notes
-“this" has so many different objects!
+```notes
+`this` has so many different objects!
 Javascript object notation  JSON	
 
 JSON initialize  and create an object
@@ -93,13 +92,14 @@ function Myfunc(){}; //define a void function;
 var anObj1 = new MyFunc(); // use “new” operator assisted by MyFun Function,
 then create an object.
 var anObj2 = new Myfunc; // function can also be called without brackets
-****NOTICE: Javascript is case sensitive.
+
+**NOTICE: Javascript is case sensitive.**
 ```
 
 DATA type Javascript  9/14/2015
 ## Source code JSBibleS2 module.
 
-```text notes
+```javascript
 undefined: unknown stuffs, code cannot define them. 
 *Att: typeof(undefined)   return  undefined
 
@@ -139,9 +139,10 @@ In JavaScript, only object and function type provide the capability of objectifi
  However, actually there is no concept of class in JS.
 ```
 
-##Source code JSBibleS3 module.
+## Source code JSBibleS3 module.
 Javascript processes session by session. 9/15/2015
-```text notes
+
+```notes
 Time and space of codes
 只要你记住一点：JavaScript里的代码也是一种数据，
 同样可以被任意赋值和修改的，而它的值就是代码的逻辑。
@@ -171,8 +172,7 @@ this关键字和arguments 隐含对象。
 ```
 
 
-Chapter 5 Amazing Object
-========================
+# Chapter 5 Amazing Object
 
 ```text notes
 Javascript中有object和function两种东西有对象化的能力。
@@ -192,7 +192,7 @@ JavaScript里的对象到底是波还是粒子？
 ```
 
 
-```text notes
+```javascript
 var anObject = {};  //一个对象
       anObject.aProperty = "Property of object";  //对象的一个属性
       anObject.aMethod = function(){alert("Method of object")}; //对象的一个方法
@@ -212,10 +212,9 @@ var anObject = {};  //一个对象
         alert(s + " is a " + typeof(aFunction[s]));
 ```
 
-chapter 6 放下对象
-==============
+## chapter 6 放下对象
 
-```text notes
+```notes
 再来看看function与object的超然结合吧。
 this并不一定是函数本身所属的对象。
 this只是在任意object和function元素结合时的一个概念，
@@ -234,8 +233,9 @@ JavaScript提供了传递this参数的多种形式和手段，
 这是一个放下了的“自我”，这就是JavaScript特有的世界观。
 ```
 
-Chapter 7 JavaScript Object Notation (JSON)
-``` text notes
+## Chapter 7 JavaScript Object Notation (JSON)
+
+```notes
 创建一个没有任何属性的对象：
 var o = {};
 
@@ -279,11 +279,10 @@ C++和C#不就是这样创建对象的吗？条条大路通灵山，殊途同归
 我们可以随时给原型对象动态添加新的属性和方法，
 从而动态地扩展基类的功能特性。这在静态对象语言中是很难想象的。
 微软在设计AJAX类库的初期，用了一种被称为“闭包”(closure)的技术来模拟“类”.
-
 ```
 
 
-JSBibleS5  source code of 甘露模型
+## JSBibleS5  source code of 甘露模型
 ```notes
 In jsbibles5.js
 ```
