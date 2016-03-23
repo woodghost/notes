@@ -64,6 +64,10 @@ The table head must be snap to grid.
 
 :ghost:
 
+
+
+
+
 把javascript以前记的笔记放在readme里~~
 ============================
 
@@ -71,7 +75,7 @@ The table head must be snap to grid.
 
 ### Source code module in this project.
 
-Text version notes here, some guides, tips, etc.
+##### Text version notes here, some guides, tips, etc.
 ```text notes
 “this" has so many different objects!
 Javascript object notation  JSON	
@@ -93,8 +97,9 @@ var anObj2 = new Myfunc; // function can also be called without brackets
 ```
 
 DATA type Javascript  9/14/2015
+## Source code JSBibleS2 module.
+
 ```text notes
-##Source code JSBibleS2 module.
 undefined: unknown stuffs, code cannot define them. 
 *Att: typeof(undefined)   return  undefined
 
@@ -134,9 +139,9 @@ In JavaScript, only object and function type provide the capability of objectifi
  However, actually there is no concept of class in JS.
 ```
 
+##Source code JSBibleS3 module.
 Javascript processes session by session. 9/15/2015
 ```text notes
-##Source code JSBibleS3 module.
 Time and space of codes
 只要你记住一点：JavaScript里的代码也是一种数据，
 同样可以被任意赋值和修改的，而它的值就是代码的逻辑。
@@ -168,6 +173,7 @@ this关键字和arguments 隐含对象。
 
 Chapter 5 Amazing Object
 ========================
+
 ```text notes
 Javascript中有object和function两种东西有对象化的能力。
 任何一个函数都可以为其动态地添加或去除属性，这些属性可以是简单类型，
@@ -184,6 +190,8 @@ object and function: both have properties and methods
 JavaScript里的对象到底是波还是粒子？
 如果存在对象量子论，那么答案一定是：波粒二象性！
 ```
+
+
 ```text notes
 var anObject = {};  //一个对象
       anObject.aProperty = "Property of object";  //对象的一个属性
@@ -206,6 +214,7 @@ var anObject = {};  //一个对象
 
 chapter 6 放下对象
 ==============
+
 ```text notes
 再来看看function与object的超然结合吧。
 this并不一定是函数本身所属的对象。
@@ -257,7 +266,7 @@ var speaker = {text: "Hello World", say: function(){alert(this.text)}};
  
    其实，可以把上面的代码改写成这种等价形式：
     function MyFunc(){};
-    var anObj = {};     //创建一个对象
+    var anObj = {};     》//创建一个对象
     MyFunc.call(anObj); //将anObj对象作为this指针调用MyFunc函数
 
 我们就可以这样理解，JavaScript先用new操作符创建了一个对象，
@@ -285,10 +294,13 @@ In jsbibles1.html  <script>
 chapter 8 in jsbibles2.html
 ```
 
+  
+    
+    
 
+> *chapter 9*
 
-*chapter 9*
-**chapter 10**
+> **chapter 10**
 
 
 
