@@ -67,10 +67,10 @@ The table head must be snap to grid.
 把javascript以前记的笔记放在readme里~~
 ============================
 
-My notes (Savvy Javascript)
-=================
+#My notes (Savvy Javascript)
 
-#Source code module in this project.
+### Source code module in this project.
+
 Text version notes here, some guides, tips, etc.
 ```text notes
 “this" has so many different objects!
@@ -167,6 +167,7 @@ this关键字和arguments 隐含对象。
 
 
 Chapter 5 Amazing Object
+========================
 ```text notes
 Javascript中有object和function两种东西有对象化的能力。
 任何一个函数都可以为其动态地添加或去除属性，这些属性可以是简单类型，
@@ -204,6 +205,7 @@ var anObject = {};  //一个对象
 ```
 
 chapter 6 放下对象
+==============
 ```text notes
 再来看看function与object的超然结合吧。
 this并不一定是函数本身所属的对象。
