@@ -235,7 +235,7 @@ JavaScript提供了传递this参数的多种形式和手段，
 
 ## Chapter 7 JavaScript Object Notation (JSON)
 
-```shell
+```javascript
 创建一个没有任何属性的对象：
 var o = {};
 
@@ -254,8 +254,8 @@ var speaker = {text: "Hello World", say: function(){alert(this.text)}};
         employees: [{name: "Angel", age: 26, Married: false}, {name: "Hanson", age: 32, Married: true}],
         readme: function() {document.write(this.name + " product " + this.product);}
     };
-其实，JSON就是JavaScript对象最好的序列化形式，它比XML更简洁也更省空间。
-对象可以作为一个JSON形式的字符串，在网络间自由传递和交换信息。
+>其实，JSON就是JavaScript对象最好的序列化形式，它比XML更简洁也更省空间。
+>对象可以作为一个JSON形式的字符串，在网络间自由传递和交换信息。
 而当需要将这个JSON字符串变成一个JavaScript对象时，只需要使用eval函数这个强大的数码转换引擎，
 就立即能得到一个JavaScript内存对象。正是由于JSON的这种简单朴素的天生丽质，
 才使得她在AJAX舞台上成为璀璨夺目的明星。
