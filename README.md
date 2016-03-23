@@ -100,12 +100,12 @@ var anObj2 = new Myfunc; // function can also be called without brackets
 DATA type Javascript  9/14/2015
 ## Source code JSBibleS2 module.
 
-```javascript
+```shell
 undefined: unknown stuffs, code cannot define them. 
 *Att: typeof(undefined)   return  undefined
 
 null: void, only has the concept, code can process.
-*Att: typrof(null) return object, but ‘null' is not object, 
+*Att: typrof(null) return object, but `null` is not object, 
 the variate which has null value actually is not object.
 
 boolean: yes or no, absolutely explicit. Can control code process.
