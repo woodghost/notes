@@ -41,10 +41,11 @@ tutorial!](https://guides.github.com/features/mastering-markdown/)
 ![GitHub Logo](https://fleep.io/blog/wp-content/uploads/2014/07/github_icon.png)
 <!--Format: ![Alt Text](url)  -->
 
-
+```python
 def foo():
     if not bar:
         return True
+```
         
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
 - [x] list syntax required (any unordered or ordered list supported)
