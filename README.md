@@ -143,7 +143,7 @@ In JavaScript, only object and function type provide the capability of objectifi
 ## Source code JSBibleS3 module.
 Javascript processes session by session. 9/15/2015
 
-```notes
+```shell
 Time and space of codes
 只要你记住一点：JavaScript里的代码也是一种数据，
 同样可以被任意赋值和修改的，而它的值就是代码的逻辑。
@@ -173,24 +173,23 @@ this关键字和arguments 隐含对象。
 ```
 
 
-# Chapter 5 Amazing Object
+## Chapter 5 Amazing Object
 
-```text notes
-Javascript中有object和function两种东西有对象化的能力。
-任何一个函数都可以为其动态地添加或去除属性，这些属性可以是简单类型，
-可以是对象，也可以是其他函数。也就是说，函数具有对象的全部特征，
-你完全可以把函数当对象来用。其实，函数就是对象，只不过比一般的对象
-多了一个括号“()”操作符，这个操作符用来执行函数的逻辑。
+>Javascript中有object和function两种东西有对象化的能力。
+>任何一个函数都可以为其动态地添加或去除属性，这些属性可以是简单类型，
+>可以是对象，也可以是其他函数。也就是说，函数具有对象的全部特征，
+>你完全可以把函数当对象来用。其实，函数就是对象，只不过比一般的对象
+>多了一个括号“()”操作符，这个操作符用来执行函数的逻辑。
 
-object and function: both have properties and methods
-对象和函数可以象数组一样，用属性名或方法名作为下标来访问并处理。
-那么，它到底应该算是数组呢，还是算对象？
-我们知道，数组应该算是线性数据结构，线性数据结构一般有一定的规律，
-适合进行统一的批量迭代操作等，有点像波。而对象是离散数据结构，
-适合描述分散的和个性化的东西，有点像粒子。因此，我们也可以这样问：
-JavaScript里的对象到底是波还是粒子？
-如果存在对象量子论，那么答案一定是：波粒二象性！
-```
+>object and function: both have properties and methods
+>对象和函数可以象数组一样，用属性名或方法名作为下标来访问并处理。
+>那么，它到底应该算是数组呢，还是算对象？
+>我们知道，数组应该算是线性数据结构，线性数据结构一般有一定的规律，
+>适合进行统一的批量迭代操作等，有点像波。而对象是离散数据结构，
+>适合描述分散的和个性化的东西，有点像粒子。因此，我们也可以这样问：
+>JavaScript里的对象到底是波还是粒子？
+>如果存在对象量子论，那么答案一定是：波粒二象性！
+
 
 
 ```javascript
@@ -215,7 +214,7 @@ var anObject = {};  //一个对象
 
 ## chapter 6 放下对象
 
-```notes
+```shell
 再来看看function与object的超然结合吧。
 this并不一定是函数本身所属的对象。
 this只是在任意object和function元素结合时的一个概念，
@@ -236,7 +235,7 @@ JavaScript提供了传递this参数的多种形式和手段，
 
 ## Chapter 7 JavaScript Object Notation (JSON)
 
-```notes
+```shell
 创建一个没有任何属性的对象：
 var o = {};
 
