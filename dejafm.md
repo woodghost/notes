@@ -57,7 +57,9 @@ Ajax和template共同作用在data里面模拟数据
 >model通过call Event（notify）到 view
 
 ```javascript
-Special.prototype.topicList = new Mdl({ //  request: function (data, callback) { //    RequestHelper.request(Actions.topicList, data, callback, this); //向后台发送request //  } //});
+Special.prototype.topicList = new Mdl({ //  request: function (data, callback) 
+
+{ //    RequestHelper.request(Actions.topicList, data, callback, this); //向后台发送request //  } //});
 ```
 3. RequestHelper（看一下里面的结构）
 
@@ -84,7 +86,19 @@ CTRL.models.Special.topicList.request({id: '56209a49cee3c65f0fbdfd20'},afterRequ
 5. render里面解析数据
 
 ```javascript
-function render(data) {   initResources();   data = data || VIEW.models.Movie.movieList.get();   // 1. data =  2. get() method.   var list = [];   //data = data.data.schemata;   data.data.schemata.forEach(function(val){     var d = {};     d['title'] = val.name;     d['desc'] = val.title;     val.child.forEach(function(val){       d[val.name] = val.title;    //name:name    title:value     });     list.push(Tpl.movieList(d));     //console.log(d);   });   els.movieList.html( list.join('') );
+function render(data) {   
+initResources();   
+data = data || VIEW.models.Movie.movieList.get();   // 1. data =  2. get() method.   
+var list = [];   //data = data.data.schemata;   
+data.data.schemata.forEach(function(val){     
+var d = {};     d['title'] = val.name;     
+d['desc'] = val.title;     
+val.child.forEach(function(val){ 
+      d[val.name] = val.title;//name:name    title:value 
+          });
+               list.push(Tpl.movieList(d));     //console.log(d);   
+          });   
+          els.movieList.html( list.join('') );
 data.forEach(function (key) {
 key传的是一个object，具体来讲就是json里面的模拟数据
 });
@@ -130,16 +144,19 @@ function afterRequestMissionDetailInfo(success){   CTRL.views.Basic.msgbox.hid
 ## View render & bind event (and a little about Controller `Core.Event.trigger()`)
 #### CTRL：controller里面事件名称要一致
 ```javascript
-Core.Event.on('MessageListController.beforeRequestMessageList',beforeRequestMessageList); 你这里叫'MessageListController.beforeRequestMessageList，之后在view里面调用的时候也要是一样的名字，要不然没法调用
+Core.Event.on('MessageListController.beforeRequestMessageList',beforeRequestMessageList); 
+你这里叫'MessageListController.beforeRequestMessageList，之后在view里面调用的时候也要是一样的名字，要不然没法调用
 ```
 
 你想了很久很久的数据结构改变怎么重新渲染的问题。
 你可以改html里面的数据结构。
 ```html
-比如<div class="mission <%=_mission_body?'':'hide'%>" 
+比如
+<div class="mission <%=_mission_body?'':'hide'%>" 
 data-idx="<%=_idx%>"> <img micro-src="<%=occasions.image%>">
 <div class="occasion-name">Occasion: <%=occasions.name%></div>
-<div class="name"><%=user_info.name%></div> 你没必要非得在view render里面解析到那一层结构，在html里面直接改分分钟找到啊
+<div class="name"><%=user_info.name%></div> 
+你没必要非得在view render里面解析到那一层结构，在html里面直接改分分钟找到啊
 ```
 
 你可以在view里拼所有你想要的order，structure，方便你渲染，方便你使用
@@ -149,29 +166,43 @@ for example，这个message list里面有个地方创建了data-idx attribute，
 ```javascript
 function showOutfits(){   
 els.outfits.removeClass('hide');   
-renderOutfit(this.getAttribute('data-idx')); }
+renderOutfit(this.getAttribute('data-idx'));
+ }
  function hideOutfits(){   
 els.outfits.addClass('hide'); }  function render(data) {   
 initResources();   data = data || VIEW.models.Message.messageList.get();    
 if(!data || data.ret != 0 || !data.data){     return;   }   var list = [];   
-els.mainMsgs = VIEW.models.Message.messageList.page?els.mainMsgs:[];  //自己创建一个数组，保证分页之后idx会继续往下数不会清空。（这种容错的措施真的是依情况而定，经验越丰富解决这类问题几率越高）
+els.mainMsgs = VIEW.models.Message.messageList.page?els.mainMsgs:[];  //自己创建一个数组，保证分页之后idx会继续往下数不会清空。（
+这种容错的措施真的是依情况而定，经验越丰富解决这类问题几率越高）
 ```
 
 ![compatible error](img/compatible.jpg)
 要是一开始就设置成空数组，翻了页之后归零了，没办法正确计数。（图为容错之后的正确情况）
 ```javascript
-appendFn = VIEW.models.Message.messageList.page ? 'append' : 'html’;这句话是解决第一个tpl没有被渲染的情况 
-
+appendFn = VIEW.models.Message.messageList.page ? 'append' : 'html';
+这句话是解决第一个tpl没有被渲染的情况 
 
  这个idx呢，是在render的时候用数组长度拼，拼起来作为Attribute放到html里，再取回来传给要render的function当param使用。   
-data.data.forEach(function(key) {     key._idx = els.mainMsgs.length; //数组的长度     
+data.data.forEach(function(key) {     
+key._idx = els.mainMsgs.length; //数组的长度     
 key._mission_body = key.style && VIEW._StyleTemplateView.getStylesHtm([key.style]);     
-list.push(Tpl.msgListItem(key));     els.mainMsgs.push(key);//每一个遍历过的object都push进数组里面，方便计数。   });   
-els.msgListBd.append(list.join(''));   renderListEnd(els.msgListEnd, data.end ? '.end' : '.more'); }//end render  function renderOutfit(idx){  
- var data = els.mainMsgs[idx];   if(data.style){     els.stylesList.html(VIEW._StyleTemplateView.getStylesHtm([data.style]));     
- els.occasion.html(Tpl.occasion(data.style));   } } 
+list.push(Tpl.msgListItem(key));     
+els.mainMsgs.push(key);//每一个遍历过的object都push进数组里面，方便计数。   
+});   
+els.msgListBd.append(list.join(''));   
+renderListEnd(els.msgListEnd, data.end ? '.end' : '.more'); }//end render  
+
+function renderOutfit(idx){  
+ var data = els.mainMsgs[idx];   if(data.style){     
+ els.stylesList.html(VIEW._StyleTemplateView.getStylesHtm([data.style]));     
+ els.occasion.html(Tpl.occasion(data.style));  
+  } 
+ } 
+ 
  function renderListEnd(el,cls){   
- el.children().removeClass('show');   el.find(cls).addClass('show'); }
+ el.children().removeClass('show');   
+ el.find(cls).addClass('show');
+  }
  
 ```
 >当你需要在view里面trigger controller里面的方法，首先要在controller里面写Core.Event.on();
@@ -189,12 +220,20 @@ CTRL.models.Style.styleReviewHistory.request(data) }
 data.data是一个数组，所以用forEach做循环遍历，里面的key则是object，idx就是下标。
 ```javascript
 function render(data) {   initResources();   data = data || VIEW.models.Movie.movieList.get();   
-// 1. data =  2. get() method.   var list = [];   
-//data = data.data.schemata;   data.data.schemata.forEach(function(val){     
-var d = {};     d['title'] = val.name;     d['desc'] = val.title;     val.child.forEach(function(val){      
- d[val.name] = val.title;    //name:name    title:value     });     
+// 1. data =  2. get() method.   
+var list = [];   
+//data = data.data.schemata;   
+data.data.schemata.forEach(function(val){     
+var d = {};
+     d['title'] = val.name; 
+    d['desc'] = val.title; 
+      val.child.forEach(function(val){ 
+           d[val.name] = val.title;    //name:name    title:value 
+               });     
  list.push(Tpl.movieList(d));//这个template里面放的是一个对象。     
- //console.log(d);   });   els.movieList.html( list.join('') );
+ //console.log(d);
+    });
+    els.movieList.html( list.join('') );
 ```
 这个是以前DDMS里面生成的数据结构，里面的弯弯绕的解析很值得多加练习多多熟悉
 ```javascript
