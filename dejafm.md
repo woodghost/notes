@@ -157,6 +157,7 @@ function beforeRequestStyleReviewHistory(item) {
  }
 controller里面可以接收view传过来的参数，然后再把拼起来的data传给后台server。
 包括下面这个防止出错的msgbox也是从其他地方传来了success这个参数，防止没有请求成功数据之类的……
+
 function afterRequestMissionDetailInfo(success){ 
   CTRL.views.Basic.msgbox.hideLoading();
      var data = CTRL.models.Mission.missionStyleDetailList.get();
@@ -204,8 +205,8 @@ if(!data || data.ret != 0 || !data.data){ 
   } 
     var list = [];   
 els.mainMsgs = VIEW.models.Message.messageList.page?els.mainMsgs:[];  //自己创建一个数组，保证分页之后idx会继续往下数不会清空。
-（这种容错的措施真的是依情况而定，经验越丰富解决这类问题几率越高）
 ```
+（这种容错的措施真的是依情况而定，经验越丰富解决这类问题几率越高）
 
 ![compatible error](img/compatible.jpg)
 要是一开始就设置成空数组，翻了页之后归零了，没办法正确计数。（图为容错之后的正确情况）
