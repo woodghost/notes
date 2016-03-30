@@ -1,6 +1,7 @@
 # Notes
 Taking notes via learning, in this case especially in dejafm encountered problems.
 
+### Tooltips.js
 ###### 2016.3.9
 ```javascript
 var tipId = 'cloth_tip_' + VIEW.models.Basic.getUserId();
@@ -22,7 +23,8 @@ var tipId = 'cloth_tip_' + VIEW.models.Basic.getUserId();
 `var tipId = 'cloth_tip_' + VIEW.models.Basic.getUserId();` and `Core
 .localStorage.set(tipId, new Date().getTime());` are for cache storage.
 
-### About auto-loading pictures
+### ClothView.js & StyleBook.js
+##### About auto-loading pictures
 
 ```javascript
     this.resizeCalculateWindow = function () {
