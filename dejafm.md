@@ -72,12 +72,18 @@ Special.prototype.topicList = new Mdl({ //  request: function (data, callback)
 3. 数据写在data/topiclist.json里面，ajax afterRequestXxxxxx方法传入
 4. 数据在DDMS上或者后端传入，定义全局callback方法那样传入
 5. 写你需要用的方法。
+
 一定要在onView方法里面调用你写的方法
-        function afterRequestTopicList(success){          //console.log(CTRL.models.Special.topicList.get());   }
-       CTRL.models.Special.topicList.request(null,afterRequestTopicList);        用到的解析数据的方法是Ajax   afterRequestTopicList
+```javascript
+function afterRequestTopicList(success)
+{//console.log(CTRL.models.Special.topicList.get());
+        }
+   CTRL.models.Special.topicList.request(null,afterRequestTopicList);
+           用到的解析数据的方法是Ajax   afterRequestTopicList
 
-CTRL.models.Special.topicList.request({id: '56209a49cee3c65f0fbdfd20'},afterRequestTopicList);//request方法，从DDMS里读数据，使用id
-
+CTRL.models.Special.topicList.request({id: 
+'56209a49cee3c65f0fbdfd20'},afterRequestTopicList);//request方法，从DDMS里读数据，使用id
+```
 #### Viewer(render&bind event)
 1. 引入model
 2. this.model declaration
@@ -116,7 +122,8 @@ func({"name":"stackoverflow","id":5});
 ```
 For more info: http://stackoverflow.com/questions/2887209/what-are-the-differences-between-json-and-jsonp?answertab=oldest#tab-top
 
-JSONP allows you to specify a callback function that is passed your JSON object. This allows you to bypass the same origin policy and load JSON from an external server into the javascript on your webpage.
+JSONP allows you to specify a callback function that is passed your JSON object. 
+This allows you to bypass the same origin policy and load JSON from an external server into the javascript on your webpage.
 http://json-jsonp-tutorial.craic.com/index.html
 
 
@@ -132,20 +139,42 @@ model是写了来连接后台api，来拿数据用的。
 要执行什么，一定要写在onView里面
 
 controller里面事件名称要一致
-Core.Event.on('MessageListController.beforeRequestMessageList',beforeRequestMessageList);//感觉写这个就是为了view里面可以trigger的 你这里叫'MessageListController.beforeRequestMessageList，之后在view里面调用的时候也要是一样的名字，要不然没法trigger
 
-function beforeRequestStyleReviewHistory(item) {   var ids = [];   item.clothes.forEach(function(key){     ids.push(key.id);   });   var data = {     cloth_ids: ids.join(',')   };   CTRL.models.Style.styleReviewHistory.request(data) }
-controller里面可以接收view传过来的参数，然后再把拼起来的data传给后台server。包括下面这个防止出错的msgbox也是从其他地方传来了success这个参数，防止没有请求成功数据之类的……
-function afterRequestMissionDetailInfo(success){   CTRL.views.Basic.msgbox.hideLoading();   var data = CTRL.models.Mission.missionStyleDetailList.get();   if (!success || !data || data.ret != 0) {     CTRL.views.Basic.msgbox.showFailed({       msg: success && data.msg     });   } }
+```javascript
+`Core.Event.on('MessageListController.beforeRequestMessageList',beforeRequestMessageList);`
+//感觉写这个就是为了view里面可以trigger
+// 你这里叫'MessageListController
+.beforeRequestMessageList'，之后在view里面调用的时候也要是一样的名字，要不然没法trigger
 
+function beforeRequestStyleReviewHistory(item) {
+   var ids = [];
+   item.clothes.forEach(function(key){
+     ids.push(key.id);
+   });
+   var data = {
+     cloth_ids: ids.join(',')
+   };
+  CTRL.models.Style.styleReviewHistory.request(data) 
+ }
+controller里面可以接收view传过来的参数，然后再把拼起来的data传给后台server。
+包括下面这个防止出错的msgbox也是从其他地方传来了success这个参数，防止没有请求成功数据之类的……
+function afterRequestMissionDetailInfo(success){ 
+  CTRL.views.Basic.msgbox.hideLoading();
+     var data = CTRL.models.Mission.missionStyleDetailList.get();
+     if (!success || !data || data.ret != 0) {
+       CTRL.views.Basic.msgbox.showFailed({
+         msg: success && data.msg
+       });
+     } }
+```
 
-分页的时候controller onView里面要调一下resetPage() method
+分页的时候controller onView里面要调一下`**resetPage()**` method
 
 ## View render & bind event (and a little about Controller `Core.Event.trigger()`)
 #### CTRL：controller里面事件名称要一致
 ```javascript
 Core.Event.on('MessageListController.beforeRequestMessageList',beforeRequestMessageList); 
-你这里叫'MessageListController.beforeRequestMessageList，之后在view里面调用的时候也要是一样的名字，要不然没法调用
+你这里叫'MessageListController.beforeRequestMessageList'，之后在view里面调用的时候也要是一样的名字，要不然没法调用
 ```
 
 你想了很久很久的数据结构改变怎么重新渲染的问题。
@@ -171,9 +200,12 @@ renderOutfit(this.getAttribute('data-idx'));
  function hideOutfits(){   
 els.outfits.addClass('hide'); }  function render(data) {   
 initResources();   data = data || VIEW.models.Message.messageList.get();    
-if(!data || data.ret != 0 || !data.data){     return;   }   var list = [];   
-els.mainMsgs = VIEW.models.Message.messageList.page?els.mainMsgs:[];  //自己创建一个数组，保证分页之后idx会继续往下数不会清空。（
-这种容错的措施真的是依情况而定，经验越丰富解决这类问题几率越高）
+if(!data || data.ret != 0 || !data.data){ 
+    return; 
+  } 
+    var list = [];   
+els.mainMsgs = VIEW.models.Message.messageList.page?els.mainMsgs:[];  //自己创建一个数组，保证分页之后idx会继续往下数不会清空。
+（这种容错的措施真的是依情况而定，经验越丰富解决这类问题几率越高）
 ```
 
 ![compatible error](img/compatible.jpg)
