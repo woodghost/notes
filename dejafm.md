@@ -75,8 +75,7 @@ Special.prototype.topicList = new Mdl({ //  request: function (data, callback)
 
 一定要在onView方法里面调用你写的方法
 ```javascript
-function afterRequestTopicList(success)
-{//console.log(CTRL.models.Special.topicList.get());
+function afterRequestTopicList(success){//console.log(CTRL.models.Special.topicList.get());
         }
    CTRL.models.Special.topicList.request(null,afterRequestTopicList);
            用到的解析数据的方法是Ajax   afterRequestTopicList
@@ -143,8 +142,8 @@ controller里面事件名称要一致
 ```javascript
 `Core.Event.on('MessageListController.beforeRequestMessageList',beforeRequestMessageList);`
 //感觉写这个就是为了view里面可以trigger
-// 你这里叫'MessageListController
-.beforeRequestMessageList'，之后在view里面调用的时候也要是一样的名字，要不然没法trigger
+// 你这里叫MessageListController.beforeRequestMessageList
+之后在view里面调用的时候也要是一样的名字，要不然没法trigger
 
 function beforeRequestStyleReviewHistory(item) {
    var ids = [];
@@ -168,7 +167,7 @@ function afterRequestMissionDetailInfo(success){ 
      } }
 ```
 
-分页的时候controller onView里面要调一下`**resetPage()**` method
+分页的时候controller onView里面要调一下`resetPage()` method
 
 ## View render & bind event (and a little about Controller `Core.Event.trigger()`)
 #### CTRL：controller里面事件名称要一致
