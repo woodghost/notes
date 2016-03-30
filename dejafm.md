@@ -147,14 +147,32 @@ for example，这个message list里面有个地方创建了data-idx attribute，
 还有渲染outfits，就是那个style template，outfits view里面是取data-element属性然后填进去，你照样也可以拼出html结构然后填进去
 
 ```javascript
-function showOutfits(){   els.outfits.removeClass('hide');   renderOutfit(this.getAttribute('data-idx')); } function hideOutfits(){   els.outfits.addClass('hide'); }  function render(data) {   initResources();   data = data || VIEW.models.Message.messageList.get();    if(!data || data.ret != 0 || !data.data){     return;   }   var list = [];   els.mainMsgs = VIEW.models.Message.messageList.page?els.mainMsgs:[];  //自己创建一个数组，保证分页之后idx会继续往下数不会清空。（这种容错的措施真的是依情况而定，经验越丰富解决这类问题几率越高）
+function showOutfits(){   
+els.outfits.removeClass('hide');   
+renderOutfit(this.getAttribute('data-idx')); }
+ function hideOutfits(){   
+els.outfits.addClass('hide'); }  function render(data) {   
+initResources();   data = data || VIEW.models.Message.messageList.get();    
+if(!data || data.ret != 0 || !data.data){     return;   }   var list = [];   
+els.mainMsgs = VIEW.models.Message.messageList.page?els.mainMsgs:[];  //自己创建一个数组，保证分页之后idx会继续往下数不会清空。（这种容错的措施真的是依情况而定，经验越丰富解决这类问题几率越高）
 ```
 
-![compatible error](img/compatible.tiff)
+![compatible error](img/compatible.jpg)
 要是一开始就设置成空数组，翻了页之后归零了，没办法正确计数。（图为容错之后的正确情况）
 ```javascript
 appendFn = VIEW.models.Message.messageList.page ? 'append' : 'html’;这句话是解决第一个tpl没有被渲染的情况 
- 这个idx呢，是在render的时候用数组长度拼，拼起来作为Attribute放到html里，再取回来传给要render的function当param使用。   data.data.forEach(function(key) {     key._idx = els.mainMsgs.length; //数组的长度     key._mission_body = key.style && VIEW._StyleTemplateView.getStylesHtm([key.style]);     list.push(Tpl.msgListItem(key));     els.mainMsgs.push(key);//每一个遍历过的object都push进数组里面，方便计数。   });   els.msgListBd.append(list.join(''));   renderListEnd(els.msgListEnd, data.end ? '.end' : '.more'); }//end render  function renderOutfit(idx){   var data = els.mainMsgs[idx];   if(data.style){     els.stylesList.html(VIEW._StyleTemplateView.getStylesHtm([data.style]));     els.occasion.html(Tpl.occasion(data.style));   } } function renderListEnd(el,cls){   el.children().removeClass('show');   el.find(cls).addClass('show'); }
+
+
+ 这个idx呢，是在render的时候用数组长度拼，拼起来作为Attribute放到html里，再取回来传给要render的function当param使用。   
+data.data.forEach(function(key) {     key._idx = els.mainMsgs.length; //数组的长度     
+key._mission_body = key.style && VIEW._StyleTemplateView.getStylesHtm([key.style]);     
+list.push(Tpl.msgListItem(key));     els.mainMsgs.push(key);//每一个遍历过的object都push进数组里面，方便计数。   });   
+els.msgListBd.append(list.join(''));   renderListEnd(els.msgListEnd, data.end ? '.end' : '.more'); }//end render  function renderOutfit(idx){  
+ var data = els.mainMsgs[idx];   if(data.style){     els.stylesList.html(VIEW._StyleTemplateView.getStylesHtm([data.style]));     
+ els.occasion.html(Tpl.occasion(data.style));   } } 
+ function renderListEnd(el,cls){   
+ el.children().removeClass('show');   el.find(cls).addClass('show'); }
+ 
 ```
 >当你需要在view里面trigger controller里面的方法，首先要在controller里面写Core.Event.on();
  算是打开（声明）要调用这个方法。
@@ -162,11 +180,21 @@ appendFn = VIEW.models.Message.messageList.page ? 'append' : 'html’;这句话�
 
 #### controller
 ```javascript
-function beforeRequestStyleReviewHistory(item) {   var ids = [];   item.clothes.forEach(function(key){     ids.push(key.id);   });   var data = {     cloth_ids: ids.join(',')   };   CTRL.models.Style.styleReviewHistory.request(data) }
+function beforeRequestStyleReviewHistory(item) {   
+var ids = [];   item.clothes.forEach(function(key){     
+ids.push(key.id);   });   var data = {     
+cloth_ids: ids.join(',')   };   
+CTRL.models.Style.styleReviewHistory.request(data) }
 ```
 data.data是一个数组，所以用forEach做循环遍历，里面的key则是object，idx就是下标。
 ```javascript
-function render(data) {   initResources();   data = data || VIEW.models.Movie.movieList.get();   // 1. data =  2. get() method.   var list = [];   //data = data.data.schemata;   data.data.schemata.forEach(function(val){     var d = {};     d['title'] = val.name;     d['desc'] = val.title;     val.child.forEach(function(val){       d[val.name] = val.title;    //name:name    title:value     });     list.push(Tpl.movieList(d));//这个template里面放的是一个对象。     //console.log(d);   });   els.movieList.html( list.join('') );
+function render(data) {   initResources();   data = data || VIEW.models.Movie.movieList.get();   
+// 1. data =  2. get() method.   var list = [];   
+//data = data.data.schemata;   data.data.schemata.forEach(function(val){     
+var d = {};     d['title'] = val.name;     d['desc'] = val.title;     val.child.forEach(function(val){      
+ d[val.name] = val.title;    //name:name    title:value     });     
+ list.push(Tpl.movieList(d));//这个template里面放的是一个对象。     
+ //console.log(d);   });   els.movieList.html( list.join('') );
 ```
 这个是以前DDMS里面生成的数据结构，里面的弯弯绕的解析很值得多加练习多多熟悉
 ```javascript
