@@ -137,7 +137,9 @@ model是写了来连接后台api，来拿数据用的。
 要给后台拼concat什么数据传过去，都是在controller里面实现的
 要执行什么，一定要写在onView里面
 
-controller里面事件名称要一致
+controller里面事件名称要一致, onView function的效果和beforeXxxx 
+function是一样的，你要是写了before function，必须在onView里面调用才能生效，等同于你不写before 
+function直接把语句写在onView方法里。
 
 ```javascript
 `Core.Event.on('MessageListController.beforeRequestMessageList',beforeRequestMessageList);`
