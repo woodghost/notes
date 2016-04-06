@@ -11,12 +11,11 @@ Here's specific modules of dejafm project
 
 File name | Content
 --------- | -------
-[StreetSnap.md](https://github.com/woodghost/notes/blob/master/style.md) | StreetSnap related content
-                                                                         | including stylebook, mystreetsnap .etc
-[Outfits.md](https://github.com/woodghost/notes/blob/master/javascript.md)| outfits related content
-[Cloth.md](https://github.com/woodghost/notes/blob/master/dejafm.md)| cloth detail related content
-[Mission.md](https://github.com/woodghost/notes/blob/master/supplement.md)| my mission list & my mission detail     
-[MessageList.md](https://github.com/woodghost/notes/blob/master/supplement.md)| message list   
+[StreetSnap.md](https://github.com/woodghost/notes/blob/master/dejafm/StreetSnap.md) | StreetSnap related content including stylebook, mystreetsnap .etc
+[Outfits.md](https://github.com/woodghost/notes/blob/master/dejafm/Outfits.md)| outfits related content
+[Cloth.md](https://github.com/woodghost/notes/blob/master/dejafm/Cloth.md)| cloth detail related content
+[Mission.md](https://github.com/woodghost/notes/blob/master/dejafm/Mission.md)| my mission list & my mission detail     
+[MessageList.md](https://github.com/woodghost/notes/blob/master/dejafm/MessageList.md)| message list in deja3.2 share wardrobe 
 
 
 ## MVC processing
