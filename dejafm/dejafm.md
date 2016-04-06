@@ -3,6 +3,22 @@ Taking notes via learning, in this case especially in dejafm encountered problem
 First of all, I'll divided this file into 2 parts, one is cataloged 
 by structure: Model, View and Controller，the other one is about 
 concrete modules of dejafm project.
+
+#Guide Map
+Here's specific modules of dejafm project
+(Updating & organising)
+
+
+File name | Content
+--------- | -------
+[StreetSnap.md](https://github.com/woodghost/notes/blob/master/style.md) | StreetSnap related content
+                                                                         | including stylebook, mystreetsnap .etc
+[Outfits.md](https://github.com/woodghost/notes/blob/master/javascript.md)| outfits related content
+[Cloth.md](https://github.com/woodghost/notes/blob/master/dejafm.md)| cloth detail related content
+[Mission.md](https://github.com/woodghost/notes/blob/master/supplement.md)| my mission list & my mission detail     
+[MessageList.md](https://github.com/woodghost/notes/blob/master/supplement.md)| message list   
+
+
 ## MVC processing
 最早的电影list也是在此处render
 
@@ -129,6 +145,23 @@ http://json-jsonp-tutorial.craic.com/index.html
 
 ## Model & Controller related
 关于model 与 controller
+### 打开了Controller 以及回调客户端方法的大门
+现在要做一个缓存，应该是满足他点进detail页面之后原来的页面上有一些缓存的数据
+（为了返回的时候记住位置？）因为你点过去之后页面其实不刷新。
+想做这个的话好好研究一下cloth module
+
+//这也是一种做缓存的方式（虽然我还不是完全明白）合理的情况应该是从detail页返回时page不refresh也不改变
+
+
+//另一种做缓存的方式
+//cloth
+ var clothStoreData = CTRL.models.Cloth.clothDetail.getFromStoreById(viewClothQuery.id),   clothCurData = CTRL.models.Cloth.clothDetail.get(); if (clothStoreData && clothCurData) {   clothCurData.__STORE_ID != clothStoreData.__STORE_ID   && CTRL.models.Cloth.clothDetail.set(clothStoreData, viewClothQuery.id); } else {   //CTRL.views.Basic.msgbox.showLoading();   CTRL.models.Cloth.clothDetail.request({     __STORE_ID: viewClothQuery.id,     cloth_id: viewClothQuery.id   }, afterRequestClothDetail); } //streets var streetsStoreData = CTRL.models.StreetSnap.clothStreets.getFromStoreById(viewClothQuery.id),   streetsCurData = CTRL.models.StreetSnap.clothStreets.get(); if (streetsStoreData && streetsCurData) {   streetsCurData.__STORE_ID != streetsStoreData.__STORE_ID && CTRL.models.StreetSnap.clothStreets.setWithStoreData(streetsStoreData);
+//Model里面必须写setWithStoreData function } else {   CTRL.models.StreetSnap.clothStreets.resetPage();   beforeRequestClothStreet(); }
+//所有tips，firstAlert，都需要做一下localStorage
+e.g. var tipId = 'cloth_tip_' + VIEW.models.Basic.getUserId();
+ Core.localStorage.set(tipId, new Date().getTime());
+
+
 model是写了来连接后台api，来拿数据用的。
 经常在controller里面调的post，request，resetPage（分页时）之类的方法都是你每次为了取数据而直接写在model里面的。
 
