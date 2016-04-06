@@ -1,6 +1,6 @@
 # cloth, street snap
-## 仔细回顾一下streetsnap怎么做的吧。
-### 首先streetsnap model
+ 仔细回顾一下streetsnap怎么做的吧。
+## 首先streetsnap model
 写model要完全和server定义api吻合。
 里面有streetsnap的model，做了缓存之类的，看上去有点复杂，
 复杂是因为里面除了常规的分页model之外还有 reportStreet Mdl 以及
@@ -12,7 +12,7 @@
 还有mystreet那个的model
 还有街拍点赞like dislike report（也就是删除并且反馈原因）那几个post方法。
 
-### 接下来Controller
+## 接下来Controller
 所有的接口都是json格式的，
 所有与server的api协议都可以在swagger里面找到
 controller里面绝大部分是与server的交互
@@ -29,7 +29,30 @@ reportStreet: Core.localHost + '/apis/street/report_reason/v3_1',
 ```
 这三个API
 
-（代码）
+```javascript
+function beforePostLikeSnap(id) {//if 是report function，pass(id, reason)
+    id = id || '';
+    var data = {
+      street_id: id,
+      like: 1 //unlike function和like基本一样，pass 的param是like: 0; report也差不多，pass的是reason: reason
+    };
+    CTRL.models.StreetSnap.clothStreets.likeStreetById(id,true);
+    CTRL.models.StreetSnap.likeStreet.post(JSON.stringify(data), afterPostLikeSnap);
+  }
+
+  function afterPostLikeSnap(success) {//after function基本都是一样的：hide loading
+    CTRL.views.Basic.msgbox.hideLoading();
+    var data = CTRL.models.StreetSnap.likeStreet.get();
+    if (!success || !data || data.ret != 0) {//报错处理
+      CTRL.views.Basic.msgbox.showFailed({
+        msg: success && data.msg
+      });
+    }else{
+      Core.Event.trigger('StyleBookController.resetMyStreets');
+      //重置myStreet
+    }
+  }
+```
 ### 值得注意的是
 - beforePostLikeSnap（id）里面调了filter里面的likeStreetById(id,true) function
 - data里面写着需要传给server的params
@@ -44,7 +67,7 @@ Core.Event.on('StreetSnapsController.beforePostLikeSnap', beforePostLikeSnap);
 直接在onView function里面判断没请求到数据就去请求。
 ```
 
-### 然后View
+## 然后View
 streetsnap 会用到util里的Slider
 然后常规的actions和streetsnap model
 
@@ -54,4 +77,25 @@ likeAlertId, firstLikeAlerted, reportStreetReasonId, reportStreetReason,�
 监听model用updated method render function
 
 bindEvent()
+```javascript
+function bindEvent() {
+    els.clothes.on(tap, '.item', setLastViewQuery);
+    //
+    els.snapBar.on(tap, '.like', onToggleStreetLike);
+    //trigger toggle like
+    els.snapBar.on(tap, '.report', beforeReportStreet);
+    //report & delete
+    els.reportStreetPop.on(tap, '.reason', beforeSelectReportStreetReason);
+    //two reason(11 and 12)
+    els.reportStreetPop.on(tap, '.dont-show', beforeToggleReportStreetMute);
+    //不再弹出report弹窗的逻辑
+    //以上都是report的一些逻辑
+    els.reportStreetPop.on(tap,function(e){
+      if(!$(e.target).is('.msg-bd *')){
+        hideReportPop();
+      }
+    });
+    //点击非弹窗区域则弹窗消失
+  }//end bindEvent
+```
 

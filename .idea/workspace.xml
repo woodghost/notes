@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a89f5bc1-f9e0-45a4-baa6-e8334a2009bd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/StreetSnap.md" afterPath="$PROJECT_DIR$/dejafm/StreetSnap.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/dejafm.md" afterPath="$PROJECT_DIR$/dejafm/dejafm.md" />
     </list>
     <ignored path="notes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,8 +62,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.4871795">
-                <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+              <first_editor vertical-scroll-proportion="0.7863248">
+                <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -501,8 +500,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.4871795">
-            <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <first_editor vertical-scroll-proportion="0.7863248">
+            <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
             <folding />
           </first_editor>
           <second_editor />
