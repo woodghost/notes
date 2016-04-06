@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89f5bc1-f9e0-45a4-baa6-e8334a2009bd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/StreetSnap.md" afterPath="$PROJECT_DIR$/dejafm/StreetSnap.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/dejafm.md" afterPath="$PROJECT_DIR$/dejafm/dejafm.md" />
     </list>
     <ignored path="notes.iws" />
@@ -39,15 +40,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dejafm.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dejafm.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dejafm/dejafm.md">
           <provider editor-type-id="MultiMarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.5940171">
-                <caret line="244" column="23" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="23" />
+              <first_editor vertical-scroll-proportion="0.18803419">
+                <caret line="336" column="31" selection-start-line="336" selection-start-column="31" selection-end-line="336" selection-end-column="31" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -55,28 +56,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StreetSnap.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StreetSnap.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dejafm/StreetSnap.md">
           <provider editor-type-id="MultiMarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <first_editor vertical-scroll-proportion="0.4871795">
+                <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="446" column="3" selection-start-line="446" selection-start-column="3" selection-end-line="446" selection-end-column="3" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -121,6 +112,7 @@
         <option value="$PROJECT_DIR$/dejafm/StreetSnapRelated.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dejafm/dejafm.md" />
+        <option value="$PROJECT_DIR$/dejafm/StreetSnap.md" />
       </list>
     </option>
   </component>
@@ -447,14 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="446" column="3" selection-start-line="446" selection-start-column="3" selection-end-line="446" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blank.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07926024">
@@ -463,17 +447,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dejafm/StreetSnap.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.815068">
+          <caret line="446" column="3" selection-start-line="446" selection-start-column="3" selection-end-line="446" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -503,8 +481,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.5940171">
-            <caret line="244" column="23" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="23" />
+          <first_editor vertical-scroll-proportion="0.18803419">
+            <caret line="336" column="31" selection-start-line="336" selection-start-column="31" selection-end-line="336" selection-end-column="31" />
             <folding />
           </first_editor>
           <second_editor />
@@ -514,6 +492,20 @@
         <state vertical-scroll-proportion="0.37648612">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dejafm/StreetSnap.md">
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.4871795">
+            <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

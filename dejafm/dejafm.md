@@ -42,15 +42,13 @@ Core.Event.trigger('login')
 ```
 
 #### Key Door原则
-每当遇到奇怪的模块未添加成功
+每当遇到模块未添加成功
 手动添加三个文件上面的声明
 
 1. views.html
 2. _debug-view.scss
 3. App.js
 
-有道上面的丢了，只能重写一份，正好加深印象吧。
-这种事情估计会经常发生的
 
 Ajax和template共同作用在data里面模拟数据
 所有步骤都可以分三步考虑：（这个叫契约）
