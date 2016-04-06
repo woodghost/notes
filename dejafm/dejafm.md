@@ -242,7 +242,7 @@ els.mainMsgs = VIEW.models.Message.messageList.page?els.mainMsgs:[];  //自己�
 ```
 （这种容错的措施真的是依情况而定，经验越丰富解决这类问题几率越高）
 
-![compatible error](img/compatible.jpg)
+![compatible error](../img/compatible.jpg)
 要是一开始就设置成空数组，翻了页之后归零了，没办法正确计数。（图为容错之后的正确情况）
 ```javascript
 appendFn = VIEW.models.Message.messageList.page ? 'append' : 'html';
@@ -377,4 +377,4 @@ executed(e.g is in above segment)
 
 3. Need to adopt into favorite outfits list, should change all 
 functions' and parameters' names.
-![screen shot](img/shot.jpg)
+![screen shot](../img/shot.jpg)
