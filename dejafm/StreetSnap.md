@@ -99,3 +99,304 @@ function bindEvent() {
   }//end bindEvent
 ```
 
+
+show, hide, update functions
+```javascript
+this.show = function () {
+    initResources();
+
+    Core.Event.trigger('trigerAnimate', els.main);
+    VIEW._BasicView.show(VIEW.viewCls);
+    //以上generator自动生成
+    
+    scrollToStreet();
+    renderStreetNav();
+    els.isViewVisible = true;
+    els.isFirstIn = true;
+    //show function里面call的function，define的varibles
+  }
+  this.hide = function () {
+    if (!els) {
+      return;
+    }
+    els.isLoadingNextList = false;
+    els.lastViewQueryId = null;
+    els.isViewVisible = false;
+  }//出this page的view之后要hide的东西
+  
+  
+  function showReportPop(){
+    els.reportStreetPop.removeClass('hide');
+  }
+  function hideReportPop(){
+    els.reportStreetPop.addClass('hide');
+  }//show hide report pop
+  
+  
+  function updateViewQuery(req) {
+    viewQuery = req.query;
+  }//auto generated
+  function updateStoreIds() {//更新localStorage id
+    likeAlertId = 'street_first_like_' + VIEW.models.Basic.getUserId();
+    //should get user id when click like(in basic Model)
+    firstLikeAlerted = Core.localStorage.get(likeAlertId);
+    //record first liked
+
+    reportStreetReasonId = 'street_report_reason_' + VIEW.models.Basic.getUserId();
+    reportStreetReason = Core.localStorage.get(reportStreetReasonId);
+
+    reportStreetPopMuteId = 'street_pop_mute_' + VIEW.models.Basic.getUserId();
+    isReportStreetPopMute = Core.localStorage.get(reportStreetPopMuteId);
+  }
+```
+  
+  
+### 接下来是render function 部分
+大致上是分snap bar，street snap slider，clothes三大部分，每一部分还有很多细节
+```javascript
+  function render(data) {
+    initResources();//initial templates & elements
+    updateStoreIds();
+    data = data || VIEW.models.StreetSnap.clothStreets.get();
+
+    if (!data || data.ret != 0 || !data.data) {
+      return;
+    }
+    els.mainData = data;//定义了ele，把data赋值过去了
+    resetTmpVals();//调reset临时值的这个function，后面有具体的这个function的内容
+    var isAdd = VIEW.models.StreetSnap.clothStreets.page && !VIEW.models.StreetSnap.clothStreets.isFromStore,
+      appendFn = isAdd ? 'append' : 'html',
+      htm = [];
+    data.data.forEach(function (key, idx) {
+      if (idx < 2) {
+        var IMG = new Image();
+        IMG.src = key.image + '/750.jpg'
+      }
+      htm.push(Tpl.street(key));
+    });
+    !data.end && htm.push(Tpl.loadingStreet({}));
+
+    els.streetsList.find('.item.loading').remove();
+    els.streetsList[appendFn](htm.join(''));
+
+    renderClothes(data.data, isAdd);
+    renderSnapBar(data.data);
+
+    if (data.data.length > 0) {
+      els.streetsSlider = els.streetsSlider || new Slider({
+          listEl: els.streetsList,
+          enableDrag: true,
+          enableLoop: false,
+          itemLen: 658,
+          onTouchend: function () {
+            VIEW._BasicView.GlobalTouch.preventMove = false;
+          },
+          onTouchmove: function (x, y) {
+            VIEW._BasicView.GlobalTouch.preventMove = x > 5 && y < 30;
+          },
+          onMove: function (index) {
+            loadImgs(index);
+            renderClothesListNav(index);
+            renderSnapBarNav(index);
+            loadNextPage(index);
+          }
+        });
+      if (isAdd) {
+        els.streetsSlider.refresh();
+      } else {
+        els.streetsSlider.reset();
+        scrollToStreet();
+      }
+    }
+  }
+```
+
+
+```javascript
+  function renderSnapBar(data) {
+    var htm = [],
+      appendFn = VIEW.models.StreetSnap.clothStreets.page ? 'append' : 'html';
+    data.forEach(function (key) {
+      htm.push(Tpl.snapBar(key));
+    });
+    els.snapBar[appendFn](htm.join(''));
+  }
+  function renderSnapBarNav(idx) {
+    els.snapBarListEls = els.snapBarListEls || els.snapBar.children();
+    els.snapBarListEls.addClass('hide');
+    els.snapBarListEls.eq(idx).removeClass('hide');
+  }
+```
+
+
+```javascript
+  function renderClothes(data, isAdd) {
+    var htm = [],
+      appendFn = isAdd ? 'append' : 'html';
+    data.forEach(function (key) {
+      htm.push(Tpl.clothes(key));
+    });
+    els.clothesBd[appendFn](htm.join(''));
+  }
+
+  function renderClothesListNav(idx) {
+    els.clothesListEls = els.clothesListEls || els.clothesBd.children();
+    els.clothesListEls.addClass('hide');
+    els.clothesListEls.eq(idx).removeClass('hide');
+  }
+```
+
+```javascript
+  function renderStreetNav() {
+    els.streetsNav.removeClass('hide');
+    setTimeout(function () {
+      els.streetsNav.addClass('hide')
+    }, 2100);
+  }
+```
+
+
+```javascript
+  function renderReportStreet(){
+    hideReportPop();
+    var idx = els.reportStreetIndex,
+      cloth = els.clothesListEls.eq(idx),
+      bar = els.snapBarListEls.eq(idx),
+      delay = 300;
+
+    els.isReportingStreet = true;
+    els.streetsSlider.removeCurrent(delay,function(idx,count){
+      cloth.remove();
+      bar.remove();
+      resetTmpVals();
+      renderSnapBarNav(idx);
+      renderClothesListNav(idx);
+      !count && Core.Router.back();
+      setTimeout(function(){
+        els.isReportingStreet = false;
+      },delay);
+    });
+  }
+```
+
+
+```javascript
+  function loadNextPage(idx) {
+    els.listItemEls = els.listItemEls || els.streetsList.children();
+    if (els.isViewVisible && !els.mainData.end && !els.isLoadingNextList && idx == els.listItemEls.length - 1) {
+      els.isLoadingNextList = true;
+      Core.Event.trigger('ClothController.beforeRequestClothStreet');
+    }
+  }
+
+  function loadImgs(idx) {
+    var simgs = [].slice.call(els.streetsList.find('.img')),
+      limgs;
+    idx = idx !== undefined ? idx : 0;
+    limgs = [simgs[idx], simgs[idx - 1], simgs[idx + 1], simgs[idx - 2], simgs[idx + 2]];
+    function load(img) {
+      if (img) {
+        var timg = new Image(),
+          src = img.getAttribute('data-src');
+        if (src) {
+          timg.setAttribute("src", src);
+          timg.onload = function () {
+            img.removeAttribute('data-src');
+            img.style['background-image'] = 'url(' + src + ')';
+            load(limgs.shift());
+          }
+        } else if (limgs.length) {
+          load(limgs.shift());
+        }
+      } else if (limgs.length) {
+        load(limgs.shift());
+      }
+    }
+
+    load(limgs.shift());
+  }
+```
+
+
+```javascript
+  function scrollToStreet() {
+    if (viewQuery && viewQuery.id && els.streetsSlider) {
+      els.lastViewQueryId != viewQuery.id && els.streetsSlider.moveTo(els.streetsList.find('.item[data-id="' + viewQuery.id + '"]').index());
+    }
+  }
+```
+
+
+```javascript
+  function onToggleStreetLike() {
+    var el = $(this),
+      id = el.attr('data-id'),
+      isLike = !el.hasClass('on');
+    el.toggleClass('on');
+    if (isLike) {
+      Core.Event.trigger('StreetSnapsController.beforePostLikeSnap', id);
+
+      if (!firstLikeAlerted) {
+        VIEW._BasicView.msgbox.showDialog({
+          msg: 'Added to your favorites! We will show you more snaps based on your preferences.',
+          yesText: 'OK'
+        });
+        firstLikeAlerted = true;
+        Core.localStorage.set(likeAlertId, 1);
+      }
+    } else {
+      Core.Event.trigger('StreetSnapsController.beforePostUnlikeSnap', id);
+    }
+  }
+```
+
+
+```javascript
+  function beforeReportStreet(){
+    if(els.isReportingStreet) return;
+
+    var el = $(this),
+      id = el.attr('data-id');
+    els.reportStreetId = id;
+    els.reportStreetIndex = el.parents('.item').index();
+    if(isReportStreetPopMute){
+      Core.Event.trigger('StreetSnapsController.beforePostReportStreet', id, reportStreetReason);
+      renderReportStreet();
+    }else{
+      showReportPop();
+    }
+  }
+  function beforeToggleReportStreetMute(){
+    els.reportStreetPopCheckbox.toggleClass('on');
+  }
+  function beforeSelectReportStreetReason(){
+    var el = $(this),
+      isMuted = els.reportStreetPopCheckbox.hasClass('on');
+    reportStreetReason = el.attr('data-reason');
+    Core.localStorage.set(reportStreetReasonId,reportStreetReason);
+    Core.Event.trigger('StreetSnapsController.beforePostReportStreet', els.reportStreetId, reportStreetReason);
+    renderReportStreet();
+    if(isMuted){
+      isReportStreetPopMute = true;
+      Core.localStorage.set(reportStreetPopMuteId,new Date().getTime());
+    }else{
+      isReportStreetPopMute = false;
+      Core.localStorage.del(reportStreetPopMuteId);
+    }
+  }
+```
+
+```javascript
+  function resetTmpVals() {
+    els.isLoadingNextList = false;
+    els.listItemEls = null;
+    els.clothesListEls = null;
+    els.snapBarListEls = null;
+  }
+
+  function setLastViewQuery() {
+    setTimeout(function () {
+      els.lastViewQueryId = viewQuery && viewQuery.id;
+    }, 1000);
+  }
+```
