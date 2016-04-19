@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a89f5bc1-f9e0-45a4-baa6-e8334a2009bd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/Mission.md" afterPath="$PROJECT_DIR$/dejafm/Mission.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript.md" afterPath="$PROJECT_DIR$/javascript.md" />
     </list>
     <ignored path="notes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,8 +75,8 @@
         <entry file="file://$PROJECT_DIR$/dejafm/Mission.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="1.1923077">
-                <caret line="128" column="2" selection-start-line="128" selection-start-column="2" selection-end-line="128" selection-end-column="2" />
+              <first_editor vertical-scroll-proportion="0.123931624">
+                <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -144,8 +143,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dejafm/dejafm.md" />
         <option value="$PROJECT_DIR$/dejafm/StreetSnap.md" />
-        <option value="$PROJECT_DIR$/dejafm/Mission.md" />
         <option value="$PROJECT_DIR$/javascript.md" />
+        <option value="$PROJECT_DIR$/dejafm/Mission.md" />
       </list>
     </option>
   </component>
@@ -557,8 +556,8 @@
     <entry file="file://$PROJECT_DIR$/dejafm/Mission.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="1.1923077">
-            <caret line="128" column="2" selection-start-line="128" selection-start-column="2" selection-end-line="128" selection-end-column="2" />
+          <first_editor vertical-scroll-proportion="0.123931624">
+            <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
             <folding />
           </first_editor>
           <second_editor />

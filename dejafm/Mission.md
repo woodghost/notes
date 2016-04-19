@@ -103,7 +103,7 @@ function render(data) {
 ```javascript
   function onAddMission()
   {//这个onAddMission是与native交互的一处，在右上角，要在一进入页面的show 
-  //function里面调，这里客户端每调一次web这边回调 myMIssionList timer都要reset一下，页面要刷新一次。
+  //function里面调，这里客户端每调一次 回调 myMIssionList timer都要reset一下，页面要刷新一次。
     Core.Event.trigger('appAPI', 'addMission', null, function(){
       VIEW.models.Mission.myMissionList.timer.reset();
       Core.Router.run();
