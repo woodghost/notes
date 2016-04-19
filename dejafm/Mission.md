@@ -17,7 +17,6 @@ if(VIEW.models.Mission.myMissionList.page) { 
   }); 
   }
 ```
-
 这是改了一下之后写的，就是正常渲染了之后把第一个从DOM里面删掉，这样做性能不好
 确实是要考虑页面性能的……
 你分页之后再删除确实不如判断一下第一页的话past不渲染第一个。
@@ -30,6 +29,8 @@ if(!VIEW.models.Mission.myMissionList.page){ 
   els.missionBd.find('.item').eq(0).remove(); 
   }
 ```
+
+
 
 然而后来改了逻辑，之前的太慢效率太低
 >lulu‘s new code
