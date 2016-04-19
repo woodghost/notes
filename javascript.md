@@ -21,7 +21,7 @@ function fancyAlert(arg) {
 * js双感叹号是为了转化为Boolean值，一般用来判断元素是否存在。
 
 
-#### js语法相关（目前衍伸）
+#### js语法相关
 
 ```javascript
 getAttribute() vs .attr()
@@ -29,9 +29,13 @@ getAttribute() vs .attr()
 The following line does indeed show "number", not "string":
 alert(typeof $("#example").attr("tabindex")); //Number
 Now, the thing that's confusing me is that when using the DOM method getAttribute, you get a different result:
+
 （getAttribute这个操作DOM特性的方法在高级程序设计10.1节点层次深入讲到了）
 alert(typeof $("#example")[0].getAttribute("tabindex")); //String
+```
 
+### getAttribute vs attr
+```javascript
 Explanation from MDN
 elem.checked	true (Boolean) Will change with checkbox state
 $( elem ).prop( "checked" )	true (Boolean) Will change with checkbox state
