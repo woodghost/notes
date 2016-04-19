@@ -1,4 +1,4 @@
-### myMissionList
+## myMissionList
 >mine
 我最早写的那些还是被删掉了，今后应该在这里做个备份，会比较方便。
 之前为了分页第零页past list不render第一个，是这么做的，判断是不是第一个object，不是才渲染
@@ -126,7 +126,7 @@ function render(data) {
 
 
 
-### mission styling
+## mission styling
 之前的share style点击按钮的逻辑是
 ```javascript
 function beforeAppDownload(){

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a89f5bc1-f9e0-45a4-baa6-e8334a2009bd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/Mission.md" afterPath="$PROJECT_DIR$/dejafm/Mission.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript.md" afterPath="$PROJECT_DIR$/javascript.md" />
     </list>
     <ignored path="notes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/dejafm/StreetSnap.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="1.1068376">
+              <first_editor vertical-scroll-proportion="5.4017096">
                 <caret line="349" column="3" selection-start-line="349" selection-start-column="3" selection-end-line="349" selection-end-column="3" />
                 <folding />
               </first_editor>
@@ -75,8 +76,8 @@
         <entry file="file://$PROJECT_DIR$/dejafm/Mission.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.7051282">
-                <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <first_editor vertical-scroll-proportion="1.1923077">
+                <caret line="128" column="2" selection-start-line="128" selection-start-column="2" selection-end-line="128" selection-end-column="2" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -107,8 +108,8 @@
         <entry file="file://$PROJECT_DIR$/javascript.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.0">
-                <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <first_editor vertical-scroll-proportion="1.8888888">
+                <caret line="85" column="3" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -136,7 +137,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/tmp.json" />
-        <option value="$PROJECT_DIR$/javascript.md" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/blank.js" />
         <option value="$PROJECT_DIR$/dejafm.md" />
@@ -145,6 +145,7 @@
         <option value="$PROJECT_DIR$/dejafm/dejafm.md" />
         <option value="$PROJECT_DIR$/dejafm/StreetSnap.md" />
         <option value="$PROJECT_DIR$/dejafm/Mission.md" />
+        <option value="$PROJECT_DIR$/javascript.md" />
       </list>
     </option>
   </component>
@@ -514,22 +515,8 @@
     <entry file="file://$PROJECT_DIR$/dejafm/StreetSnap.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="1.1068376">
+          <first_editor vertical-scroll-proportion="5.4017096">
             <caret line="349" column="3" selection-start-line="349" selection-start-column="3" selection-end-line="349" selection-end-column="3" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.0">
-            <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -553,11 +540,25 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/javascript.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="1.8888888">
+            <caret line="85" column="3" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dejafm/Mission.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.7051282">
-            <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <first_editor vertical-scroll-proportion="1.1923077">
+            <caret line="128" column="2" selection-start-line="128" selection-start-column="2" selection-end-line="128" selection-end-column="2" />
             <folding />
           </first_editor>
           <second_editor />
