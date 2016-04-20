@@ -91,8 +91,8 @@
         <entry file="file://$PROJECT_DIR$/dejafm/MessageList.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.32051283">
-                <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <first_editor vertical-scroll-proportion="-0.06837607">
+                <caret line="166" column="35" selection-start-line="166" selection-start-column="35" selection-end-line="166" selection-end-column="35" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -247,6 +247,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../deja2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/tingyue/Workspace/notes/javascript.md" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -557,8 +558,8 @@
     <entry file="file://$PROJECT_DIR$/dejafm/MessageList.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.32051283">
-            <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <first_editor vertical-scroll-proportion="-0.06837607">
+            <caret line="166" column="35" selection-start-line="166" selection-start-column="35" selection-end-line="166" selection-end-column="35" />
             <folding />
           </first_editor>
           <second_editor />
