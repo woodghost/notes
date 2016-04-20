@@ -85,6 +85,13 @@ data-idx用于校准点mission看outfits一一对应的问题，点击的时候�
 
 #### 修bug之后
 然而，因为每次list显示一条新消息之后就没办法查看旧消息了，所以改了代码。
+之后又重构了代码，把bind event里的精简成了两个function
+```
+els.msgListBd.on(tap,'.mission',onClickMission); 
+els.msgListEnd.on(tap, '.more', onClickListEnd);
+```
+
+
 
 ```javascript
 
@@ -97,6 +104,7 @@ function bindEvent() {
         Core.Event.trigger('forwardMissionStyleDetail','mission_id='+missionId);
       }else{
       //.call() method的使用 try to avoid undefined situation
+      //u can find .call(this) explanation in js.md
         showOutfits.call(this);
         console.log(this)
 ```

@@ -33,6 +33,24 @@ Now, the thing that's confusing me is that when using the DOM method getAttribut
 （getAttribute这个操作DOM特性的方法在高级程序设计10.1节点层次深入讲到了）
 alert(typeof $("#example")[0].getAttribute("tabindex")); //String
 ```
+why & how to use .call(this) method
+
+```javascript
+function Foo() {
+
+  (function () {
+    console.log(this);
+    // > Foo
+  }).call(this);
+
+  (function () {
+    console.log(this);
+    // > undefined in strict mode, or Window in non strict mode
+  })();
+}
+
+var bar = new Foo;
+```
 
 ### getAttribute vs attr
 ```javascript
