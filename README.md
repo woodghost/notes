@@ -60,6 +60,9 @@ Content in the first column | Content in the second column
 The table head must be snap to grid.
 
 ~~I am a demo strikethrough~~
+~~l a la la  23333~~
+
+hello \***\* ~\~
 
 :ghost:
 
