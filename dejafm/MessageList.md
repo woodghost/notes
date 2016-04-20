@@ -96,7 +96,7 @@ function bindEvent() {
 ```
 因为之前showOutfits() function也用了this.getAttribute(), 如果不用.call(this)
 这个method，console会报错，浮窗outfits会啥也不显示，因为undefined没有取到.mission 所在的DOM 
-element，下图是\“this\” contained content
+element，下图是“this” contained content
 ![console.log](../img/this.jpg)
 ```javascript
       }
