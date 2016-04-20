@@ -87,9 +87,15 @@ function bindEvent() {
     els.msgListBd.on(tap,'.mission',function () {
       var missionId = this.getAttribute('data-missionId');
       if(missionId!=0){
+      //这里改为有missionId才会跳转到detail
         Core.Event.trigger('forwardMissionStyleDetail','mission_id='+missionId);
       }else{
+      //.call() method的使用 try to avoid undefined situation
         showOutfits.call(this);
+        console.log(this)
+```
+![console.log](../img/this.jpg)
+```javascript
       }
     });
     els.msgListEnd.on(tap, '.more', function () {
