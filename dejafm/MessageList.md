@@ -77,6 +77,12 @@ function bindEvent() {
   }
 ```
 
+如果用data-fake-link跳转的话, 要找到需要传递的id，拼到viewquery后面
+
+首先需要注意的是json里一些自己造的字段和DOM里新增的Attribute是处理DOM显示问题的，
+e.g. old,主要是用于判断第一页只显示新消息的时候用的；
+data-idx用于校准点mission看outfits一一对应的问题，点击的时候只显示idx对应的outfits，具体的方式是定义一个数组，用数组长度来充当idx
+
 #### 修bug之后
 然而，因为每次list显示一条新消息之后就没办法查看旧消息了，所以改了代码。
 
