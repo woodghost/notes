@@ -132,7 +132,7 @@ element，下图是“this” contained content
     Core.Event.trigger('trigerAnimate',els.main);
     VIEW._BasicView.show(VIEW.viewCls);
   }
-  this.hide = function () {
+  this.hide = function () {gitgit 
     if (!els) {
       return;
     }

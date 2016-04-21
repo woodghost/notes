@@ -6,12 +6,13 @@ Today's task is to be familiar with markdown for the future usage.
 (Updating & organising)
 
 
-File name | Content
---------- | -------
-[style.md](https://github.com/woodghost/notes/blob/master/style.md) | CSS3 & HTML5
-[Javascript.md](https://github.com/woodghost/notes/blob/master/javascript.md)| javascript or node.js, and any other structures using js
-[dejafm.md](https://github.com/woodghost/notes/blob/master/dejafm/dejafm.md)| some encountered issues in dejafm project& MVC generator.
-[supplement.md](https://github.com/woodghost/notes/blob/master/supplement.md)| Other CS knowledge (Updating & organising)
+|File name | Content|
+|--------- |:-------:|
+|[style.md](https://github.com/woodghost/notes/blob/master/style.md) | CSS3 & HTML5|
+|[Javascript.md](https://github.com/woodghost/notes/blob/master/javascript.md)| javascript or node.js, and any other structures using js|   
+|[dejafm.md](https://github.com/woodghost/notes/blob/master/dejafm/dejafm.md)| some encountered issues in dejafm project& MVC generator.|
+|[supplement.md](https://github.com/woodghost/notes/blob/master/supplement.md)| Other CS knowledge (Updating & organising)|
+|[clothms.md](https://github.com/woodghost/notes/blob/master/clothms/clothms.md)|cloth management system(using React JSX)|
 
 #Test
 
