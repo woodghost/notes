@@ -92,6 +92,7 @@ els.msgListEnd.on(tap, '.more', onClickListEnd);
 ```
 
 
+#### View
 
 ```javascript
 
@@ -166,7 +167,7 @@ element，下图是“this” contained content
         //hide old item in first page
         if(key.new){
           key.old = '';
-          historyCount++;//有几条新消息最终就是几
+          historyCount++;//有几条旧消息最终就是几！！！！！这个位置搞错直接导致一连串懵逼
         }else{
           key.old = 'hide';
         }
@@ -181,16 +182,32 @@ element，下图是“this” contained content
     });
     els.msgListBd[appendFn](list.join(''));
     var endCls;
-    if(VIEW.models.Message.messageList.page){
+    //注意！！这段要变了
+    /**if(VIEW.models.Message.messageList.page){
       endCls = data.end? '.end': '.more';
     }else{
       endCls = historyCount == data.data.length && data.end? '.end': '.more';
       //his和len相等且end=1，return “.end”, 否则".more", 
       //endCls = (historyCount == data.data.length && data.end)? '
       //.end': '.more'; 这样打个括号好理解一点
-    }
+    }**/
+    if(VIEW.models.Message.messageList.page){
+          endCls = data.end? '.end': '.more';
+        }else{
+          if((historyCount == data.data.length)){//如果旧消息和数组长度相等
+            //show hide item first
+            renderListHideItems();//就显示那些被隐藏的
+            endCls = data.end? '.end': '.more';
+          }else{
+            endCls = '.more';
+          }
+        }
     renderListEnd(els.msgListEnd, endCls);
   }//end render
+  
+    function renderListHideItems(){//为了从右下角入口处正常显示all msg...我以前也觉得有问题，但是那时候没有单独的入口所以看不出存在这个问题。
+      els.msgListBd.find('.item.hide').removeClass('hide');
+    }
 
   function renderOutfit(idx){
     var data = els.mainMsgs[idx];
