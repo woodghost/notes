@@ -255,6 +255,8 @@ viewNames = {
       CTRL.models.Message.messageList.resetPage();
       beforeRequestMessageList();
     }
+    //现在可以理解为什么要做缓存这件事了。。。一个message列表没有里面有的部分会进入mission style detail，然后会再返回，这时候如果不做缓存就清了
+    //message list的数据，所以有这种需要从另一个页面返回列表的必须做这个
 
     //追加统计
     analyticsCurView();
