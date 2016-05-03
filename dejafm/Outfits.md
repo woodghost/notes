@@ -451,7 +451,7 @@ function bindEvent() {
           }
         });
       renderRemixBtn();//这个render btn就是判断一下这个change btn是正常还是disable状态
-      renderNextStyle();主要是styleList那部分的渲染
+      renderNextStyle();刚进来或按下change之后render styleList的渲染步骤
     }
   }
 
@@ -544,7 +544,7 @@ function bindEvent() {
     //延迟1.5m隐藏occasion name
   }
 
-  function renderNextStyle() {
+  function renderNextStyle() {render styleList部分的步骤
     //0. hide guide
     if (els.isRenderNextStyle) {
       return;
