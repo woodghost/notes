@@ -22,7 +22,7 @@ Style.prototype.outfits = new Mdl({//outfits的分页model
   //model里面嵌套的model
   filter: new Mdl({//改版之后没有顶部filter tags那一部分内容了，但是这个字段还是能起到作用的
     getIds: function(){//所有filter出的tags的id们
-      var d = this.data,ids = [];
+      var d = this.data,ids = [];//ids in tag means occasion_ids
       if (d && d.tags) {
         d.tags.forEach(function (key) {
           ids.push(key.id);
@@ -153,10 +153,10 @@ function OutfitsController() {
     if (storeData && curData && !CTRL.models.Style.outfits.timer.isTimeout(12,cur__STORE_ID)) {
       curData.__STORE_ID != storeData.__STORE_ID && CTRL.models.Style.outfits.set(storeData, cur__STORE_ID);
     } else {
-      CTRL.views.Outfits.hideStyles();
+      CTRL.views.Outfits.hideStyles();//定义子this上面的method就可以这样调用
       //CTRL.views.Basic.msgbox.showLoading();
-      CTRL.models.Style.outfits.resetPage();
-      beforeRequestOutfits();
+      CTRL.models.Style.outfits.resetPage();//分页model都要有reset这个操作
+      beforeRequestOutfits();//再向server发请求。
     }
 
     CTRL.views.Outfits.show();
@@ -164,10 +164,12 @@ function OutfitsController() {
     //追加统计
     analyticsCurView();
   }
-
-  function updateOutfitFilter(options){
-    if (options) {
+  
+  //更新cache的function
+  function updateOutfitFilter(options){//从view传过来的参数
+    if (options) {//options是一个object，用在loading，style loading star那部分
       CTRL.models.Style.outfits.filter.set(options, cur__STORE_ID);
+      options存在就set一下，不存在就是set null
     }else{
       CTRL.models.Style.outfits.filter.set(null);
     }
@@ -175,7 +177,7 @@ function OutfitsController() {
 
   function beforeRequestOutfits(options, reload) {
     var data = {
-      __STORE_ID: cur__STORE_ID,
+      __STORE_ID: cur__STORE_ID,//id of data in cache
       specified_id: viewOutfitsQuery.cloth_id,
       refine_ids: viewOutfitsQuery.occasion_ids
     };
@@ -194,7 +196,7 @@ function OutfitsController() {
       data.refine_ids = data.refine_ids.join(',');
     }
     CTRL.models.Style.outfits.request(data, afterRequestOutfits)
-  }
+  }//after function is a callback function
 
   function afterRequestOutfits(success) {
     CTRL.views.Basic.msgbox.hideLoading();
@@ -202,10 +204,11 @@ function OutfitsController() {
     if (!success || !data || data.ret != 0) {
       CTRL.views.Basic.msgbox.showFailed({
         msg: success && data.msg
-      });
+      });//if unsuccess, then alter error
     }else{
       //set filter
       if(data.daily_recommend){
+      //这个最基本的功能就是set filter data & update filter data
         updateOutfitFilter({
           tags: [{
             id: data.daily_recommend.occasion_id + '',
@@ -217,6 +220,7 @@ function OutfitsController() {
   }
 
   function beforeRequestStyleReviewHistory(item) {
+  //为了在点change的时候吧每套outfits的ids再给server传一遍。
     var ids = [];
     item.clothes.forEach(function(key){
       ids.push(key.id);
@@ -225,20 +229,6 @@ function OutfitsController() {
       cloth_ids: ids.join(',')
     };
     CTRL.models.Style.styleReviewHistory.request(data)
-  }
-
-  function forwardOutfits(arg) {
-    Core.Router.forward('/outfits/' + (arg || ''));
-  }
-
-  function analyticsCurView(params, title) {
-    if (!Core.Router.currentMatch(['/outfits/'])) {
-      return;
-    }
-    params = params ? ('&' + params) : '';
-    title = title || viewNames[curViewId] || document.title;
-
-    Core.Event.trigger('analytics', 'viewid=' + curViewId + params, title);
   }
 }
 module.exports = new OutfitsController;
