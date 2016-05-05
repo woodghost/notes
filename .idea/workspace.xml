@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a89f5bc1-f9e0-45a4-baa6-e8334a2009bd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JsTips/javascript.md" afterPath="$PROJECT_DIR$/JsTips/javascript.md" />
     </list>
     <ignored path="notes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +30,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.110946745">
-                <caret line="5" column="197" selection-start-line="5" selection-start-column="197" selection-end-line="5" selection-end-column="197" />
+              <first_editor vertical-scroll-proportion="-1.0192307">
+                <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -793,8 +792,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.110946745">
-            <caret line="5" column="197" selection-start-line="5" selection-start-column="197" selection-end-line="5" selection-end-column="197" />
+          <first_editor vertical-scroll-proportion="-1.0192307">
+            <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
             <folding />
           </first_editor>
           <second_editor />
