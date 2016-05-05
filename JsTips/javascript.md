@@ -1,6 +1,16 @@
 # notes
 Taking notes via learning, including CSS3, HTML5, JavaScript, jQuery...(adding in process)
 
+#Guide Map
+Today's task is to be familiar with markdown for the future usage.
+(Updating & organising)
+
+
+|File name | Content|
+|--------- |:-------:|
+|[savvyjscn.md](https://github.com/woodghost/notes/blob/master/JsTips/javascript.md)| Notes of Savvy Javascript, the book writing by Chinese, Author: Zhan Li| 
+
+
 # Reading Notes
 ### Professional Javascript for Web Developers (高级程序设计)
 
