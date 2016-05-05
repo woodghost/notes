@@ -8,7 +8,7 @@ Today's task is to be familiar with markdown for the future usage.
 
 |File name | Content|
 |--------- |:-------:|
-|[savvyjscn.md](https://github.com/woodghost/notes/blob/master/JsTips/javascript.md)| Notes of Savvy Javascript, the book writing by Chinese, Author: Zhan Li| 
+|[savvyjscn.md](https://github.com/woodghost/notes/blob/master/JsTips/savvyjscn.md)| Notes of Savvy Javascript, the book writing by Chinese, Author: Zhan Li| 
 
 
 # Reading Notes
