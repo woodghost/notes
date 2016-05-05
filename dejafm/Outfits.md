@@ -549,65 +549,72 @@ function bindEvent() {
     if (els.isRenderNextStyle) {
       return;
     }
-    els.isRenderNextStyle = true;
+    els.isRenderNextStyle = true;//证明enter renderNextStyle()
     var appendFn = els.mainStylesIndex ? 'append' : 'html',
+    //当前item以及下一个和下下一个
       item = els.mainStylesData[els.mainStylesIndex],
       nextItem = els.mainStylesData[els.mainStylesIndex + 1],
       afterNextItem = els.mainStylesData[els.mainStylesIndex + 2];
 
     if (item) {
       //1. append outfit style
+      //render outfits styleList那部分
       var htm = VIEW._StyleTemplateView.getStylesHtm([item]);
       els.stylesList[appendFn](htm);
       //2. show cover
-      renderStyleCover(htm);
+      renderStyleCover(htm);//change的时候要留下一件衣服
+      //如果带一个cloth_id, 是从cloth detail页面点进来的话
       renderStyleLock(true);
       setTimeout(function () {
-        renderStyleLoading();
+        renderStyleLoading();//styleLoading有50ms延时，是因为还有slider飞出动画效果
       }, 50);
+      //如果没有cloth_id
       (!viewQuery || !viewQuery.cloth_id) && setTimeout(function(){
-        renderStyleCover();
+        renderStyleCover();//全白屏的那个stylecover延时640ms
       },640);
-      //4. animate stars
+      //4. animate stars loading的那个星星
       setTimeout(function () {
         //5. show outfit style
-        els.isRenderNextStyle = false;
-        els.stylesList.find('.slider-current').addClass('animated');
+        els.isRenderNextStyle = false;//?为什么
+        els.stylesList.find('.slider-current').addClass('animated');//换slider的时候的动画
         //6. show guide
         showGuideTip1();
-        if(els.mainStylesIndex>4){
+        if(els.mainStylesIndex>4){//点了4次change才会出现tip3的提示
           showGuideTip3();
         }
         //7. hide stars & hide cover
         renderStyleCover();
         setTimeout(function () {
           renderStyleLock();
-          renderStyleLoading(true);
+          renderStyleLoading(true);hide star loading
         }, 350);
       }, 1000);
 
       //3. move to next outfit
-      if (els.mainStylesIndex) {
+      if (els.mainStylesIndex) {非第一套
         els.stylesSlider.refresh();
         els.stylesSlider.last();
       } else {
-        els.stylesSlider.reset();
+        els.stylesSlider.reset();第一套
       }
       els.mainStylesIndex++;
       if (els.mainStylesIndex > els.mainStylesData.length - 1) {
-        renderRemixBtn(true);
+        renderRemixBtn(true);//渲染到最后一套，把change btn置灰
       }
 
       //pre load images
+      //预存两套outfits的图片
       [].concat(afterNextItem ? afterNextItem.clothes : [], nextItem ? nextItem.clothes : [], item.clothes).forEach(function (key) {
         var img = new Image();
         img.src = key.image_trans_crop + '/360.png';
       });
     }
     Core.Event.trigger('beforeRequestStyleReviewHistory', item);
+    //call this event and pass ids to server
   }
 
   function renderStyleCover(htm) {
+  //render cover跟style差不多
     els.stylesList.find('.c-style-tpl__item.hide').removeClass('hide');
     if(htm){
       els.stylesList.addClass('frameless');
