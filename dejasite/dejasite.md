@@ -11,10 +11,4 @@ Be familiar with markdown for the future usage.
 |[dejasite.md](https://github.com/woodghost/notes/blob/master/dejasite/dejasite.md)| xxxxxxxxxxxxxxx| 
 
 
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```
+New task: add blog to webpage, almost done, considering presumably changes will be added into it.
