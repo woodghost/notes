@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89f5bc1-f9e0-45a4-baa6-e8334a2009bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StyleTips/dejafm.md" afterPath="$PROJECT_DIR$/StyleTips/dejafm.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/Cloth.md" afterPath="$PROJECT_DIR$/dejafm/Cloth.md" />
     </list>
     <ignored path="notes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,12 +55,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cloth.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cloth.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dejafm/Cloth.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.022189349">
-                <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+              <first_editor vertical-scroll-proportion="0.088757396">
+                <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -103,12 +103,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dejafm.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dejafm.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StyleTips/dejafm.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.8382126">
-                <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <first_editor vertical-scroll-proportion="0.6702619">
+                <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -168,10 +168,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/JsTips/javascript.md" />
         <option value="$PROJECT_DIR$/dejasite/dejasite.md" />
-        <option value="$PROJECT_DIR$/dejafm/Cloth.md" />
         <option value="$PROJECT_DIR$/dejafm/dejafm.md" />
         <option value="$PROJECT_DIR$/StyleTips/style.md" />
         <option value="$PROJECT_DIR$/StyleTips/dejafm.md" />
+        <option value="$PROJECT_DIR$/dejafm/Cloth.md" />
       </list>
     </option>
   </component>
@@ -729,20 +729,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dejafm/Cloth.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.022189349">
-            <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dejasite/dejasite.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -794,8 +780,22 @@
     <entry file="file://$PROJECT_DIR$/StyleTips/dejafm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.8382126">
-            <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <first_editor vertical-scroll-proportion="0.6702619">
+            <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dejafm/Cloth.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.088757396">
+            <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
