@@ -14,7 +14,7 @@ Today's task is to be familiar with markdown for the future usage.
 |--------- |:-------:|
 |[style.md](https://github.com/woodghost/notes/blob/master/StyleTips/style.md) | CSS3 & HTML5|
 |[Javascript.md](https://github.com/woodghost/notes/blob/master/JsTips/javascript.md)| javascript or node.js, and any other structures using js|   
-|[dejafm.md](https://github.com/woodghost/notes/blob/master/dejafm/dejafm.md)| some encountered issues in dejafm project& MVC generator.|
+|[dejafm](https://github.com/woodghost/notes/blob/master/dejafm/)| some encountered issues in dejafm project& MVC generator.|
 |[supplement.md](https://github.com/woodghost/notes/blob/master/RelatedTips/supplement.md)| Other CS knowledge (Updating & organising)|
 |[clothms.md](https://github.com/woodghost/notes/blob/master/clothms/clothms.md)|cloth management system(using React JSX & Semantic UI)|
 |[dejastie.md](https://github.com/woodghost/notes/blob/master/dejasite/dejasite.md)| desktop website (has gulpfile and after refactor in individually modules)|
