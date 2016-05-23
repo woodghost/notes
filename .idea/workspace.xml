@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89f5bc1-f9e0-45a4-baa6-e8334a2009bd" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dejafm/dejafm.md" afterPath="$PROJECT_DIR$/dejafm/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/JsTips/javascript.md" afterPath="$PROJECT_DIR$/JsTips/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/RelatedTips/supplement.md" afterPath="$PROJECT_DIR$/RelatedTips/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/StyleTips/style.md" afterPath="$PROJECT_DIR$/StyleTips/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/clothms/clothms.md" afterPath="$PROJECT_DIR$/clothms/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dejasite/dejasite.md" afterPath="$PROJECT_DIR$/dejasite/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="notes.iws" />
@@ -31,8 +35,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.17751479">
-                <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+              <first_editor vertical-scroll-proportion="0.35502958">
+                <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -40,8 +44,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dejasite.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dejasite/dejasite.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dejasite/README.md">
           <provider editor-type-id="MultiMarkdownFxPreviewEditor">
             <state />
           </provider>
@@ -72,8 +76,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StyleTips/style.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StyleTips/README.md">
           <provider editor-type-id="MultiMarkdownFxPreviewEditor">
             <state />
           </provider>
@@ -136,8 +140,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="javascript.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JsTips/javascript.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JsTips/README.md">
           <provider editor-type-id="MultiMarkdownFxPreviewEditor">
             <state />
           </provider>
@@ -377,6 +381,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clothms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -523,7 +541,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dejasite/dejasite.md">
+    <entry file="file://$PROJECT_DIR$/dejasite/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -551,7 +569,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StyleTips/style.md">
+    <entry file="file://$PROJECT_DIR$/StyleTips/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -593,7 +611,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JsTips/javascript.md">
+    <entry file="file://$PROJECT_DIR$/JsTips/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -635,7 +653,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JsTips/javascript.md">
+    <entry file="file://$PROJECT_DIR$/JsTips/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -720,7 +738,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clothms/clothms.md">
+    <entry file="file://$PROJECT_DIR$/clothms/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -772,7 +790,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RelatedTips/supplement.md">
+    <entry file="file://$PROJECT_DIR$/RelatedTips/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -811,7 +829,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JsTips/javascript.md">
+    <entry file="file://$PROJECT_DIR$/JsTips/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -825,7 +843,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StyleTips/style.md">
+    <entry file="file://$PROJECT_DIR$/StyleTips/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -853,7 +871,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dejasite/dejasite.md">
+    <entry file="file://$PROJECT_DIR$/dejasite/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
@@ -921,8 +939,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.17751479">
-            <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+          <first_editor vertical-scroll-proportion="0.35502958">
+            <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
             <folding />
           </first_editor>
           <second_editor />

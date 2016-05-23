@@ -12,12 +12,12 @@ Today's task is to be familiar with markdown for the future usage.
 
 |File name | Content|
 |--------- |:-------:|
-|[style.md](https://github.com/woodghost/notes/blob/master/StyleTips/style.md) | CSS3 & HTML5|
-|[Javascript.md](https://github.com/woodghost/notes/blob/master/JsTips/javascript.md)| javascript or node.js, and any other structures using js|   
+|[style](https://github.com/woodghost/notes/blob/master/StyleTips/) | CSS3 & HTML5|
+|[Javascript](https://github.com/woodghost/notes/blob/master/JsTips/)| javascript or node.js, and any other structures using js|   
 |[dejafm](https://github.com/woodghost/notes/blob/master/dejafm/)| some encountered issues in dejafm project& MVC generator.|
-|[supplement.md](https://github.com/woodghost/notes/blob/master/RelatedTips/supplement.md)| Other CS knowledge (Updating & organising)|
-|[clothms.md](https://github.com/woodghost/notes/blob/master/clothms/clothms.md)|cloth management system(using React JSX & Semantic UI)|
-|[dejastie.md](https://github.com/woodghost/notes/blob/master/dejasite/dejasite.md)| desktop website (has gulpfile and after refactor in individually modules)|
+|[supplement](https://github.com/woodghost/notes/blob/master/RelatedTips/)| Other CS knowledge (Updating & organising)|
+|[clothms](https://github.com/woodghost/notes/blob/master/clothms/)|cloth management system(using React JSX & Semantic UI)|
+|[dejastie](https://github.com/woodghost/notes/blob/master/dejasite/)| desktop website (has gulpfile and after refactor in individually modules)|
 
 #Test
 
