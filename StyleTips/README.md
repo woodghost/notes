@@ -1,4 +1,4 @@
-# notes
+# Stylesheet
 Taking notes via learning, including CSS3, HTML5, JavaScript, jQuery...(adding in process)
 
 |File name | Content|

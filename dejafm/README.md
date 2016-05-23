@@ -1,4 +1,4 @@
-# Notes
+# Dejafm
 Taking notes via learning, in this case especially in dejafm encountered problems.
 First of all, I'll divided this file into 2 parts, one is cataloged 
 by structure: Model, View and Controller，the other one is about 
