@@ -1,4 +1,4 @@
-# js notes
+# JS tips
 Taking notes via learning, including CSS3, HTML5, JavaScript, jQuery...(adding in process)
 
 #Guide Map

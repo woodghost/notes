@@ -1,4 +1,4 @@
-# dejafm stylesheet
+# Dejafm stylesheet
 Taking notes via encountered SCSS, CSS3, HTML5, problems in dejafm ...(adding in process)
 
 ## Cloth module
