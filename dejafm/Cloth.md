@@ -7,7 +7,7 @@ v16.05.16 today going on
 
 ### scss
 隐藏scroll bar的方法：比父层元素height大20px，刚好可以遮挡scroll bar，总之就看不到scroll bar了
-```css
+```scss
 .pic{
       $pic-h: 240px;
       height: $pic-h;

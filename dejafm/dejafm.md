@@ -5,7 +5,7 @@ by structure: Model, View and Controller，the other one is about
 concrete modules of dejafm project.
 
 #Guide Map
-Here's specific modules of dejafm project
+Here's specific modules of dejafm project via generator-webappstarter MVC.
 (Updating & organising)
 
 
@@ -16,6 +16,7 @@ File name | Content
 [Cloth](https://github.com/woodghost/notes/blob/master/dejafm/Cloth.md)| cloth detail related content
 [Mission](https://github.com/woodghost/notes/blob/master/dejafm/Mission.md)| my mission list & my mission detail     
 [MessageList](https://github.com/woodghost/notes/blob/master/dejafm/MessageList.md)| message list in deja3.2 share wardrobe 
+[slider](https://github.com/woodghost/notes/blob/master/dejafm/slider.md)| slider plugin in MVC structure under util folder 
 
 
 ## MVC processing
