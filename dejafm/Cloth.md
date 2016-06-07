@@ -100,6 +100,26 @@ module.exports = TabStatus;
 
 
 
+```javascript
+els.main.on('touchstart touchend',function () {//在touchstart, touchend事件下都调用底下两个函数
+      hideGuideTip();
+      stickyTabs();
+    });
+```
+
+
+```javascript
+els.matchList.on(tap, '.outfit', function () {
+      mainData && Core.Event.trigger('forwardOutfits', 'cloth_id=' + mainData.id + ('&order=' + this.dataset.order));
+      //dataset.order就是前面html里面写了Attribute：data-order, 调用的时候就要这么用，data里面命名不能出现大写字母，调用的时候
+      //the attribute named data-abc-def corresponds to the key abcDef（Refer to MDN）
+    });
+```
+要注意的是‘’里面的是方法的名称，Core.Event.trigger()相当于调用自己写好的api
+
+
+
+
 
 
 ## sub detail
