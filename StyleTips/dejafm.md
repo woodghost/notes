@@ -1,8 +1,12 @@
 # Dejafm stylesheet
 Taking notes via encountered SCSS, CSS3, HTML5, problems in dejafm ...(adding in process)
 
-## Cloth module
+## Cloth module updating
 
+## Compendium issues in dejafm
+
+### scss
+----------------------------------------------------------
 - [ ] 列表结构问题
 product-item-waterfal这个列表，clearfix, 不能打乱层次结构，一打乱底下list-row就出问题，first-child就没有margin right
 
@@ -13,7 +17,6 @@ new version detail page
 固定这个tab bar有很多细节，可以给parent一个高度，这样就不会抖动了，也不用jQuery加个padding这种不够好的方式了
 - [x] tab上面有noti气泡，点到tab的时候消失；
 - [x] 这里的msgbox得我重新做
-- [ ] 还有就是调API
 
 其实也就这些
 
@@ -22,7 +25,7 @@ new version detail page
 特别是product部分，add to wish list等于添加这件商品去想买列表
 
 想要合并post like，看missionstyledetail的controller
-tabs 千万不要在最外层写display样式，会破坏tab的结构，导致显示不正常。
+!!! tabs 千万不要在最外层写display样式，会破坏tab的结构，导致显示不正常。
 
 tab们的red dot notification
 
