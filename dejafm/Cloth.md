@@ -98,6 +98,28 @@ module.exports = TabStatus;
 调用tabStatus，先require，再init，可以在els里面init，也可以在render的时候init，
 不用传什么具体cloth id的页面（不需要根据衣服的变化而变化的），TabStatus传的是VIEW.viewCls,比如stylebook, home page guide等用到tab bar的view
 
+现在存在在页面里的具体交互和功能代码：
+
+1. 自动loading
+三个tab所对应的分页列表都要用到auto loading
+```javascript
+function onBeforeLoadingNextPageXxxx(scroll) {
+    if (els.isViewVisible && !els.isLoadingNextPageClothStreet && els.tabFirst.hasClass('on')) {
+    //1. view可见， 2. 列表没有被loading过，loading过要手动更改这个参数值。 3. 防止其他tab同时被loading，要做一个当前tab的判断。
+      if (scroll) {
+      //检测滚动状态
+        if (VIEW._BasicView.isMaxWindowScroll()) {
+        //在main View里面有个方法，计算maxScroll和top的比较结果，top>maxScroll就加载
+       //maxScroll就是最大滑动高度，理解上就是滑到列表底部就要加载下一页了，(我们不知道街拍的宽高)
+          loadingNextPageClothStreet();
+        }
+      } else {
+        loadingNextPageClothStreet();
+      }
+    }
+  }
+```
+
 
 
 ```javascript
