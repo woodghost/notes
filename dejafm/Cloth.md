@@ -100,7 +100,7 @@ module.exports = TabStatus;
 
 现在存在在页面里的具体交互和功能代码：
 
-1. 自动loading
+* 自动loading
 三个tab所对应的分页列表都要用到auto loading
 ```javascript
 function onBeforeLoadingNextPageXxxx(scroll) {
@@ -128,12 +128,12 @@ function onBeforeLoadingNextPageXxxx(scroll) {
     }
 ```
 
-2. switch tabs
+* switch tabs
 
 ```javascript
 ```
 
-3. delete street snap in the list
+* delete street snap in the list
 
 ```javascript
   function renderRemoveStreet(){
