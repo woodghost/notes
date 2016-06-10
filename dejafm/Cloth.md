@@ -114,16 +114,47 @@ function onBeforeLoadingNextPageXxxx(scroll) {
           loadingNextPageClothStreet();
         }
       } else {
+      //这位置目前不知道什么时候会触发
         loadingNextPageClothStreet();
       }
     }
   }
+  function loadingNextPageClothSimilar(){
+      if(!els.isLoadingNextPageSimilar && !els.isSimilarListEnd){
+        els.isLoadingNextPageSimilar = true;
+        Core.Event.trigger('ClothController.beforeRequestClothSimilar');
+        renderListEnd(els.similarListEnd,'.loading');
+      }
+    }
 ```
 
+2. switch tabs
+
+```javascript
+```
+
+3. delete street snap in the list
+
+```javascript
+  function renderRemoveStreet(){
+    initResources();
+//删除规则是按照id删除，为了删除的准确性，专门在model里面写了getReportId 方法
+    var id = VIEW.models.StreetSnap.clothStreets.reportStreet.get();
+    els.streetList.find('.item[data-id="'+id+'"]').remove();
+  }
+```
+
+* render各个部分
+
+```javascript
+      data.data._name = data.data.name.length>50?(data.data.name.substr(0, 50)+'...'):data.data.name;
+      //为了防止名字过长，可以用substr()这个方法裁剪一下
+```
 
 
 ```javascript
 els.main.on('touchstart touchend',function () {//在touchstart, touchend事件下都调用底下两个函数
+//为了修正这个事件的准确性
       hideGuideTip();
       stickyTabs();
     });
