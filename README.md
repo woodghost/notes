@@ -30,6 +30,7 @@ Today's task is to be familiar with markdown for the future usage.
 
 
 You can use  one `#` all the way up to `######(in `` share the same btn with tilde(~))` six for different heading sizes.
+here are samples of keyboard btn:
 <kbd>command</kbd>
 <kbd>fn</kbd>
 
