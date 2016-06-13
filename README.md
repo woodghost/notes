@@ -1,4 +1,6 @@
 # Notes
+
+###### Hi hi~ here is Woodghost~ 
 Taking notes via learning, including CSS3, HTML5, JavaScript, jQuery...(adding in process)
 > This readme file is for exploring markdown syntax and application in reality
 > Below will display some specific examples of markdown, and show the guide map of my learning notes, it'll make you directly locate to the field u r interested
