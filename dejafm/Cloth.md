@@ -100,7 +100,7 @@ module.exports = TabStatus;
 
 现在存在在页面里的具体交互和功能代码：
 
-* 自动loading
+#### 自动loading
 三个tab所对应的分页列表都要用到auto loading
 ```javascript
 function onBeforeLoadingNextPageXxxx(scroll) {
@@ -125,15 +125,42 @@ function onBeforeLoadingNextPageXxxx(scroll) {
         Core.Event.trigger('ClothController.beforeRequestClothSimilar');
         renderListEnd(els.similarListEnd,'.loading');
       }
-    }
+   }
 ```
 
-* switch tabs
+#### switch tabs
 
 ```javascript
-```
+function beforeSwitchTab(evt){
+    if(evt){
+      evt.stopPropagation();
+      evt.preventDefault();
+    }
+    var el = $(this),
+      idx = el.index(),
+      preIdx = els.tab.find('.on').index(),
+      budget= els.cloth.height(),
+      scrollTop = $(window).scrollTop(),
+      isFix = scrollTop >= budget;
 
-* delete street snap in the list
+    //record tab status
+    els.tabStatus.setTabPosition(preIdx);
+    els.tabStatus.setCurTabIdx(idx);
+
+    setTimeout(function () {
+      //fix position when the tab bar is fixed
+      Core.Event.trigger('switchTab',el[0],els.tabs,els.tabContents);
+      setTimeout(function () {
+        isFix && els.tabStatus.scrollToTabPosition(idx, els.cloth.height());
+        VIEW._BasicView.resizeCalculateWindow();
+      }, 0);
+    }, 0);
+  }
+```
+其中用到了stopPropagation & preventDefault, 
+有个简单易懂的解释在[stack overflow difference between event.stopPropagation and event.preventDefault?](http://stackoverflow.com/questions/5963669/whats-the-difference-between-event-stoppropagation-and-event-preventdefault)
+
+#### delete street snap in the list
 
 ```javascript
   function renderRemoveStreet(){
@@ -144,7 +171,7 @@ function onBeforeLoadingNextPageXxxx(scroll) {
   }
 ```
 
-* render各个部分
+#### render各个部分
 
 ```javascript
       data.data._name = data.data.name.length>50?(data.data.name.substr(0, 50)+'...'):data.data.name;
@@ -169,10 +196,6 @@ els.matchList.on(tap, '.outfit', function () {
     });
 ```
 要注意的是‘’里面的是方法的名称，Core.Event.trigger()相当于调用自己写好的api
-
-
-
-
 
 
 ## sub detail
