@@ -62,6 +62,7 @@ module.exports = new Cloth;
 重头戏是cloth页面的view部分，为了记录页面滚动和tab切换的位置，新添加了一个组件`var TabStatus = require('util/TabStatus');`
 这个组件的细节必须全搞明白，应用在wishlist page和当前的cloth page等所有需要记录tab滚动位置的地方。
 
+#### 记录tab位置：TabStatus
 ```javascript
 var store = {};
 
@@ -98,7 +99,41 @@ module.exports = TabStatus;
 调用tabStatus，先require，再init，可以在els里面init，也可以在render的时候init，
 不用传什么具体cloth id的页面（不需要根据衣服的变化而变化的），TabStatus传的是VIEW.viewCls,比如stylebook, home page guide等用到tab bar的view
 
-现在存在在页面里的具体交互和功能代码：
+现在存在在页面里的具体交互和功能代码
+
+#### switch tabs
+
+```javascript
+function beforeSwitchTab(evt){
+    if(evt){
+      evt.stopPropagation();
+      evt.preventDefault();
+    }
+    var el = $(this),
+      idx = el.index(),//取当前点击的tab的index
+      preIdx = els.tab.find('.on').index(),//原本被选中的
+      budget= els.cloth.height(),//tab之上那部分的高度(现在多了toggleExpandText, 高度可能会计算不准)
+      scrollTop = $(window).scrollTop(),//向上滑的位置的高度，随着scroll不停改变。
+      isFix = scrollTop >= budget;
+
+    //record tab status这里调用了那个封装好的util
+    els.tabStatus.setTabPosition(preIdx);
+    els.tabStatus.setCurTabIdx(idx);
+
+    setTimeout(function () {
+      //fix position when the tab bar is fixed
+      //
+      Core.Event.trigger('switchTab',el[0],els.tabs,els.tabContents);
+      setTimeout(function () {
+        isFix && els.tabStatus.scrollToTabPosition(idx, els.cloth.height());
+        VIEW._BasicView.resizeCalculateWindow();
+      }, 0);
+    }, 0);
+  }
+```
+
+其中用到了stopPropagation & preventDefault, 
+有个简单易懂的解释在[stack overflow difference between event.stopPropagation and event.preventDefault?](http://stackoverflow.com/questions/5963669/whats-the-difference-between-event-stoppropagation-and-event-preventdefault)：
 
 #### 自动loading
 三个tab所对应的分页列表都要用到auto loading
@@ -128,37 +163,6 @@ function onBeforeLoadingNextPageXxxx(scroll) {
    }
 ```
 
-#### switch tabs
-
-```javascript
-function beforeSwitchTab(evt){
-    if(evt){
-      evt.stopPropagation();
-      evt.preventDefault();
-    }
-    var el = $(this),
-      idx = el.index(),//取当前点击的tab的index
-      preIdx = els.tab.find('.on').index(),//原本被选中的
-      budget= els.cloth.height(),//tab之上那部分的高度(现在多了toggleExpandText, 高度可能会计算不准)
-      scrollTop = $(window).scrollTop(),//向上滑的位置的高度，随着scroll不停改变。
-      isFix = scrollTop >= budget;
-
-    //record tab status这里调用了那个封装好的util
-    els.tabStatus.setTabPosition(preIdx);
-    els.tabStatus.setCurTabIdx(idx);
-
-    setTimeout(function () {
-      //fix position when the tab bar is fixed
-      Core.Event.trigger('switchTab',el[0],els.tabs,els.tabContents);
-      setTimeout(function () {
-        isFix && els.tabStatus.scrollToTabPosition(idx, els.cloth.height());
-        VIEW._BasicView.resizeCalculateWindow();
-      }, 0);
-    }, 0);
-  }
-```
-其中用到了stopPropagation & preventDefault, 
-有个简单易懂的解释在[stack overflow difference between event.stopPropagation and event.preventDefault?](http://stackoverflow.com/questions/5963669/whats-the-difference-between-event-stoppropagation-and-event-preventdefault)
 
 #### delete street snap in the list
 
