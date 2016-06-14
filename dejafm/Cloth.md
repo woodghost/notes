@@ -137,13 +137,13 @@ function beforeSwitchTab(evt){
       evt.preventDefault();
     }
     var el = $(this),
-      idx = el.index(),
-      preIdx = els.tab.find('.on').index(),
-      budget= els.cloth.height(),
-      scrollTop = $(window).scrollTop(),
+      idx = el.index(),//取当前点击的tab的index
+      preIdx = els.tab.find('.on').index(),//原本被选中的
+      budget= els.cloth.height(),//tab之上那部分的高度(现在多了toggleExpandText, 高度可能会计算不准)
+      scrollTop = $(window).scrollTop(),//向上滑的位置的高度，随着scroll不停改变。
       isFix = scrollTop >= budget;
 
-    //record tab status
+    //record tab status这里调用了那个封装好的util
     els.tabStatus.setTabPosition(preIdx);
     els.tabStatus.setCurTabIdx(idx);
 
