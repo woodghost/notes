@@ -1,5 +1,15 @@
 ## cloth detail & sub detail
 全新改版之后增加了很多功能和逻辑，重新整理
+
+关于tab切换，记住view最后的tab位置
+我一开始用的是黑暗的trigger router forward方法那样，真的很黑暗……因为每切换一次tab页面就要刷新，体验灰常差。
+这个问题在此处其实有着非常简单的处理方式，因为router里面加了`preQuery`, client处传来的url带`tab=0，1，2`这样的param，我们没必要改变路由，只要模拟记住路由所带来的状态就行了。
+最后采用的方法是 `req.query.tab!=req.preQuery.tab` 就跳转到`req.query.tab`的位置，简单又合理。
+
+什么时候做缓存 & 高级缓存
+列表需要前进 & 后退到其他view，对该列表会产生频繁的请求，这时候就需要做缓存了，避免这种频繁的request. 要确保理解含义，自己能想得明白创造的出来。
+
+
 v16.05.16 today going on
 v16.05.27 today going on
 v16.05.31 dramatically change all the stuff
@@ -243,6 +253,10 @@ els.matchList.on(tap, '.outfit', function () {
 ```
 
 深刻的检讨一下列表结构的问题
+
+> 为什么会有这种问题呢？放在list的body里面就看不见list end， 放在外面呢又隐藏不了……
+> 这是列表结构的问题，script那个模板层和它外面包裹的那一层一定要连在一起
+
 如果结构不对会造成list end看不见，整个列表层级结构有问题
 正确的方式是一定要在`<script>`标签外面包一层，这一层的`data-element`名称最好同script的`data-template`命名相同
 ```html

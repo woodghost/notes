@@ -18,7 +18,6 @@ new version detail page
 - [x] tab上面有noti气泡，点到tab的时候消失；
 - [x] 这里的msgbox得我重新做
 
-其实也就这些
 
 ——————————----------
 牵扯到三个部分的model
