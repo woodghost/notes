@@ -13,7 +13,7 @@ File name | Content
 --------- | -------
 [StreetSnap](https://github.com/woodghost/notes/blob/master/dejafm/StreetSnap.md) | StreetSnap related content including stylebook, mystreetsnap .etc
 [Outfits](https://github.com/woodghost/notes/blob/master/dejafm/Outfits.md)| outfits related content
-[Cloth](https://github.com/woodghost/notes/blob/master/dejafm/Cloth.md)| cloth detail related content
+[v4functions](https://github.com/woodghost/notes/blob/master/dejafm/v4functions.md)| cloth, detail, tabs, cache, location related content in v4.0
 [Mission](https://github.com/woodghost/notes/blob/master/dejafm/Mission.md)| my mission list & my mission detail     
 [MessageList](https://github.com/woodghost/notes/blob/master/dejafm/MessageList.md)| message list in deja3.2 share wardrobe 
 [slider](https://github.com/woodghost/notes/blob/master/dejafm/slider.md)| slider plugin in MVC structure under util folder 

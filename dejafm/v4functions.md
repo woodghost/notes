@@ -102,8 +102,30 @@ module.exports = TabStatus;
 现在存在在页面里的具体交互和功能代码
 
 #### switch tabs
-
+首先是controller里面switch tab的源码，认真看一下
 ```javascript
+function switchTab(el, tabs, tabContents, analytics) {
+//传四个参数，当前按下去的element，一行所有的jquery tabs，然后所有的tab content
+    if (!tabs || !tabContents) {
+      return;
+    }
+    var isClicked = !!el;//转成boolean型
+    el = el || tabs[0];
+    for (var i = 0; i < tabs.length; i++) {
+      if (tabs[i] == el) {
+        tabs[i].classList.add('on');
+        trigerAnimate(tabContents.eq(i));
+        tabContents[i] && tabContents[i].classList.add('show');
+        analytics && isClicked && Core.Event.trigger('analyticsCurView', 'tab=' + i);
+      } else {
+        tabs[i].classList.remove('on');
+        tabContents[i] && tabContents[i].classList.remove('show');
+      }
+    }
+    analytics && Core.Event.trigger('analyticsCurView');
+  }
+
+
 function beforeSwitchTab(evt){
     if(evt){
       evt.stopPropagation();
@@ -202,9 +224,8 @@ els.matchList.on(tap, '.outfit', function () {
 要注意的是‘’里面的是方法的名称，Core.Event.trigger()相当于调用自己写好的api
 
 
-## sub detail
 
-### scss (sub detail)
+## html & scss (sub detail)
 隐藏scroll bar的方法：比父层元素height大20px，刚好可以遮挡scroll bar，总之就看不到scroll bar了
 ```scss
 .pic{
@@ -219,4 +240,37 @@ els.matchList.on(tap, '.outfit', function () {
         -webkit-overflow-scrolling: touch;
       }
     }
+```
+
+深刻的检讨一下列表结构的问题
+如果结构不对会造成list end看不见，整个列表层级结构有问题
+正确的方式是一定要在`<script>`标签外面包一层，这一层的`data-element`名称最好同script的`data-template`命名相同
+```html
+<section class="tabs-content wish-list tabs-content-default show" data-element="wishList">
+    <div class="bd" data-element="wishListBd">
+      <section class="list product-item-block" data-element="wishListItem">
+        <script type="text/html" data-template="wishListItem">
+          <article class="item" data-id="<%=id%>" data-fake-link="#/cloth/id=<%=id%>">
+            <div class="img"><img class="lazy animated" data-src="<%=image%>/420.jpg"></div>
+            <div class="detail">
+              <div class="info">
+                <div class="name"><%=name%></div>
+                <div class="brand ellipsis"><%=brand_info.name%></div>
+                <div class="meta">
+                  @@include("include/cloth-price-list.html")
+                </div>
+              </div>
+            </div>
+          </article>
+        </script>
+      </section>
+      <!-- list-end-default -->
+      @@include("include/list-end-default.html")
+      <!-- end list-end-default -->
+    </div>
+    <section class="empty hide" data-element="emptyList">
+      <p>You have no item in wishlist.</p>
+      <p>Start by adding an item in your fitting room or save an item by clicking the heart icon.</p>
+    </section>
+  </section>
 ```
