@@ -18,7 +18,7 @@ File name | Content
 [MessageList](https://github.com/woodghost/notes/blob/master/dejafm/MessageList.md)| message list in deja3.2 share wardrobe 
 [slider](https://github.com/woodghost/notes/blob/master/dejafm/slider.md)| slider plugin in MVC structure under util folder 
 [v4functions](https://github.com/woodghost/notes/blob/master/dejafm/v4functions.md)| cloth, detail, tabs, cache, location related content in v4.0
-[v4.1.3](https://github.com/woodghost/notes/blob/master/dejafm/v4-1-3branch.md)| new requirement in cloth, detail, tabs, cache, <br>shoplocation related content in v4.1.3. <br> Specify all native bridge in this part of note
+[v4.1.3](https://github.com/woodghost/notes/blob/master/dejafm/v4-1-3branch.md)| new requirement in cloth, detail, tabs, cache, <br>shoplocation related content in v4.1.3. <br> Specify all `native bridges` in this part of note
 
 
 ## MVC processing
