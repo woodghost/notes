@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89f5bc1-f9e0-45a4-baa6-e8334a2009bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/inspire_jsonp.md" afterPath="$PROJECT_DIR$/dejafm/inspire_jsonp.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/README.md" afterPath="$PROJECT_DIR$/dejafm/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/v4-1-3branch.md" afterPath="$PROJECT_DIR$/dejafm/v4-1-3branch.md" />
     </list>
     <ignored path="notes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,8 +111,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.35502958">
-                <caret line="16" column="100" selection-start-line="16" selection-start-column="96" selection-end-line="16" selection-end-column="100" />
+              <first_editor vertical-scroll-proportion="0.44378698">
+                <caret line="20" column="132" selection-start-line="20" selection-start-column="132" selection-end-line="20" selection-end-column="132" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -127,8 +127,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.75591713">
-                <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
+              <first_editor vertical-scroll-proportion="0.6893491">
+                <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -223,12 +223,12 @@
         <option value="$PROJECT_DIR$/JsTips/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dejafm/Cloth.md" />
-        <option value="$PROJECT_DIR$/dejafm/README.md" />
         <option value="$PROJECT_DIR$/dejafm/v4functions.md" />
         <option value="$PROJECT_DIR$/StyleTips/dejafm.md" />
         <option value="$PROJECT_DIR$/StyleTips/README.md" />
         <option value="$PROJECT_DIR$/StyleTips/dejafmCSS.md" />
         <option value="$PROJECT_DIR$/dejafm/inspire_jsonp.md" />
+        <option value="$PROJECT_DIR$/dejafm/README.md" />
         <option value="$PROJECT_DIR$/dejafm/v4-1-3branch.md" />
       </list>
     </option>
@@ -1259,8 +1259,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.35502958">
-            <caret line="16" column="100" selection-start-line="16" selection-start-column="96" selection-end-line="16" selection-end-column="100" />
+          <first_editor vertical-scroll-proportion="0.44378698">
+            <caret line="20" column="132" selection-start-line="20" selection-start-column="132" selection-end-line="20" selection-end-column="132" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1273,8 +1273,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.75591713">
-            <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
+          <first_editor vertical-scroll-proportion="0.6893491">
+            <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
             <folding />
           </first_editor>
           <second_editor />

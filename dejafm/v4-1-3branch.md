@@ -49,7 +49,7 @@ function bindEvent() {
   }//end bindEvent
 ```
 与native通信用的event。
-当判断不在app里面的时候：
+当判断不在app里面的时候(本地模拟debug=0)：
 
 1. 显示顶部download
 2. 点击3个tab底下的tab content里面的内容时触发msgbox, 其本质是一张图片
