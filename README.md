@@ -45,6 +45,7 @@ You can use  one `#` all the way up to `######(in `` share the same btn with til
 here are samples of keyboard btn:
 <kbd>command</kbd>
 <kbd>fn</kbd>
+(Markdown supports `html`)
 
 If you'd like to quote someone, use the > character before the line:
 
