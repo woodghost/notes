@@ -19,11 +19,12 @@
  */
 ```
 
-### webview与native通信用的API
-=============================
+-----------------------
+## webview与native通信用的API
 
-### bind event
-==============
+---------------
+
+## bind event
 现在有很多需要与native通信的地方，所以整理一下bind event
 ```javascript
 function bindEvent() {
@@ -87,3 +88,6 @@ function bindEvent() {
       });
     });
 ```
+
+
+

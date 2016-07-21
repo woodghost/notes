@@ -9,6 +9,7 @@
 什么时候做缓存 & 高级缓存
 列表需要前进 & 后退到其他view，对该列表会产生频繁的请求，这时候就需要做缓存了，避免这种频繁的request. 要确保理解含义，自己能想得明白创造的出来。
 
+------------------------------
 
 ## Model
 新增组件StoreHelper `var StoreHelper = require('app/model/StoreHelper');`
