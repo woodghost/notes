@@ -9,7 +9,7 @@ Here's specific modules of clothms project
 
 |File name | Content|
 |--------- |:-------:|
-|updating in progress| |
+|[ReportDetailProduct](https://github.com/woodghost/notes/blob/master/dejafm/report.md) | Getting to know about clothms in reactJS and try to finish this new module|
 |...|         |
 
 
