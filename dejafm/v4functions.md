@@ -11,6 +11,7 @@
 
 
 ### Model
+------------------
 新增组件StoreHelper `var StoreHelper = require('app/model/StoreHelper');`
 导致model可以改的更简便明了，focus on Actions就可以了
 新的cloth model如下
@@ -58,12 +59,16 @@ Cloth.prototype.delFromWishList = StoreHelper.postStore(Actions.delFromWishList)
 module.exports = new Cloth;
 ```
 另，如果要做追加，可以Cloth.prototype.delFromWishList = StoreHelper.postStore(Actions.delFromWishList，{写在这个大括号里}); because `function xxxxxStore(action, options) {}`
-----------------------
+
 ### Controller
 这部分基本没变，按规矩来就行了
----------------
+
+
+------------------------
+
 
 ### View
+------------------------
 重头戏是cloth页面的view部分，为了记录页面滚动和tab切换的位置，新添加了一个组件`var TabStatus = require('util/TabStatus');`
 这个组件的细节必须全搞明白，应用在wishlist page和当前的cloth page等所有需要记录tab滚动位置的地方。
 
@@ -248,8 +253,8 @@ els.matchList.on(tap, '.outfit', function () {
     });
 ```
 要注意的是‘’里面的是方法的名称，Core.Event.trigger()相当于调用自己写好的api
-------------------
 
+------------------------
 
 ## html & scss (sub detail)
 隐藏scroll bar的方法：比父层元素height大20px，刚好可以遮挡scroll bar，总之就看不到scroll bar了
