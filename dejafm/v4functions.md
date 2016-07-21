@@ -72,6 +72,27 @@ module.exports = new Cloth;
 重头戏是cloth页面的view部分，为了记录页面滚动和tab切换的位置，新添加了一个组件`var TabStatus = require('util/TabStatus');`
 这个组件的细节必须全搞明白，应用在wishlist page和当前的cloth page等所有需要记录tab滚动位置的地方。
 
+#### 复习一下toggle bars的动画制作方案（所有与屏幕touch event交互的动画异曲同工）
+Current status:
+triple tabs没在顶部，bottom bar slideInUp
+
+因为在scss里bottom bar自带SlideInUp样式，而且`display:none`，所以一进来要掉`tabBar(true)`,加一个show方法让bottom bar一直显示
+只要执行过一次动画，就要`clearTimeout`,否则会闪动，会有动画效果叠加
+
+```javascript
+if(!isApp){ return;}//如果非app环境打开直接不显示bbar了，显示顶部download
+    els.toggleBottomBarTimer && clearTimeout(els.toggleBottomBarTimer);
+```
+
+当bottom bar隐藏时需要setTimeout, 为了动画过后让这个bar彻底隐藏。否则动画结束bar又出现了
+```javascript
+el.addClass('dismiss');
+      els.toggleBottomBarTimer = setTimeout(function(){
+        el.removeClass('show dismiss');
+      },400);
+```
+不想继续让bbar toggle的话直接在判定隐藏的位置注释了`toggleBottomBar` function就ok了
+
 #### 记录tab位置：TabStatus
 ```javascript
 var store = {};

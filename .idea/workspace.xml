@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89f5bc1-f9e0-45a4-baa6-e8334a2009bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/v4-1-3branch.md" afterPath="$PROJECT_DIR$/dejafm/v4-1-3branch.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dejafm/v4functions.md" afterPath="$PROJECT_DIR$/dejafm/v4functions.md" />
     </list>
     <ignored path="notes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,15 +71,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="v4functions.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="v4functions.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dejafm/v4functions.md">
           <provider editor-type-id="MultiMarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="5.8801775">
-                <caret line="265" column="60" selection-start-line="265" selection-start-column="60" selection-end-line="265" selection-end-column="60" />
+              <first_editor vertical-scroll-proportion="0.86538464">
+                <caret line="93" column="61" selection-start-line="93" selection-start-column="61" selection-end-line="93" selection-end-column="61" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -120,15 +119,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="v4-1-3branch.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="v4-1-3branch.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dejafm/v4-1-3branch.md">
           <provider editor-type-id="MultiMarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="1.825886">
-                <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <first_editor vertical-scroll-proportion="-0.7565485">
+                <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -222,7 +221,6 @@
         <option value="$PROJECT_DIR$/dejasite/README.md" />
         <option value="$PROJECT_DIR$/JsTips/README.md" />
         <option value="$PROJECT_DIR$/dejafm/Cloth.md" />
-        <option value="$PROJECT_DIR$/dejafm/v4functions.md" />
         <option value="$PROJECT_DIR$/StyleTips/dejafm.md" />
         <option value="$PROJECT_DIR$/StyleTips/README.md" />
         <option value="$PROJECT_DIR$/StyleTips/dejafmCSS.md" />
@@ -230,6 +228,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dejafm/README.md" />
         <option value="$PROJECT_DIR$/dejafm/v4-1-3branch.md" />
+        <option value="$PROJECT_DIR$/dejafm/v4functions.md" />
       </list>
     </option>
   </component>
@@ -1129,20 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dejafm/v4functions.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="5.8801775">
-            <caret line="265" column="60" selection-start-line="265" selection-start-column="60" selection-end-line="265" selection-end-column="60" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dejasite/README.md">
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
@@ -1273,8 +1258,22 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="1.825886">
-            <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <first_editor vertical-scroll-proportion="-0.7565485">
+            <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dejafm/v4functions.md">
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.86538464">
+            <caret line="93" column="61" selection-start-line="93" selection-start-column="61" selection-end-line="93" selection-end-column="61" />
             <folding />
           </first_editor>
           <second_editor />
