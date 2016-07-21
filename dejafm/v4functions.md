@@ -10,8 +10,7 @@
 列表需要前进 & 后退到其他view，对该列表会产生频繁的请求，这时候就需要做缓存了，避免这种频繁的request. 要确保理解含义，自己能想得明白创造的出来。
 
 
-### Model
-------------------
+## Model
 新增组件StoreHelper `var StoreHelper = require('app/model/StoreHelper');`
 导致model可以改的更简便明了，focus on Actions就可以了
 新的cloth model如下
@@ -60,15 +59,14 @@ module.exports = new Cloth;
 ```
 另，如果要做追加，可以Cloth.prototype.delFromWishList = StoreHelper.postStore(Actions.delFromWishList，{写在这个大括号里}); because `function xxxxxStore(action, options) {}`
 
-### Controller
+## Controller
 这部分基本没变，按规矩来就行了
 
 
 ------------------------
 
 
-### View
-------------------------
+## View
 重头戏是cloth页面的view部分，为了记录页面滚动和tab切换的位置，新添加了一个组件`var TabStatus = require('util/TabStatus');`
 这个组件的细节必须全搞明白，应用在wishlist page和当前的cloth page等所有需要记录tab滚动位置的地方。
 
