@@ -145,6 +145,7 @@ http://json-jsonp-tutorial.craic.com/index.html
 
 ## Model & Controller related
 关于model 与 controller
+
 ### 打开了Controller 以及回调客户端方法的大门
 现在要做一个缓存，应该是满足他点进detail页面之后原来的页面上有一些缓存的数据
 （为了返回的时候记住位置？）因为你点过去之后页面其实不刷新。
@@ -206,6 +207,7 @@ function afterRequestMissionDetailInfo(success){ 
 分页的时候controller onView里面要调一下`resetPage()` method
 
 ## View render & bind event (and a little about Controller `Core.Event.trigger()`)
+
 #### CTRL：controller里面事件名称要一致
 ```javascript
 Core.Event.on('MessageListController.beforeRequestMessageList',beforeRequestMessageList); 
@@ -272,6 +274,7 @@ function renderOutfit(idx){ 
   }
  
 ```
+
 >当你需要在view里面trigger controller里面的方法，首先要在controller里面写Core.Event.on();
  算是打开（声明）要调用这个方法。
 >熟练渲染对象，数组，数组遍历，对象填到html，数组push到html()

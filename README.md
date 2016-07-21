@@ -32,13 +32,13 @@ Today's task is to be familiar with markdown for the future usage.
 ============================================
 
 ===============
-equal mark is thin line
+ `=`equal mark is thin line
 
 hi hi
 -----
 
 ------------------
-dash line can make title text stronger, also, it's bold line when single used.
+`-`dash line can make title text stronger, also, it's bold line when single used.
 
 
 You can use  one `#` all the way up to `######(in `` share the same btn with tilde(~))` six for different heading sizes.
