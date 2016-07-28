@@ -29,6 +29,7 @@ reactJS在渲染时有很多规则与之前不一样，ES2015（ES6）语法也�
 
 ## 关于API：
 首先要知道怎么设计的，要实现什么功能，为什么这么设计。
+
 1. 拿report来说，AllReasonReport这个接口的作用就是返回json进行页面渲染，json内容静态不改变，不用每次render的时候都调用，不需要给server传id，仅仅起到的就是一个取json渲染页面的作用。
 
 
