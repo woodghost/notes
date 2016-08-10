@@ -20,6 +20,7 @@ File name | Content
 [v4functions](https://github.com/woodghost/notes/blob/master/dejafm/v4functions.md)| cloth, detail, tabs, cache, location related content in v4.0
 [Main structure design](https://github.com/woodghost/notes/blob/master/dejafm/Core.md)| Core model, controller, view function, including class.js core.js <br/> storeHelper.js etc
 [v4.1.3](https://github.com/woodghost/notes/blob/master/dejafm/v4-1-3branch.md)| new requirement in cloth, detail, tabs, cache, <br/>shoplocation related content in v4.1.3. <br/> Specify all `native bridges` in this part of note
+[v4.1.4-invite](https://github.com/woodghost/notes/blob/master/dejafm/v4-1-4invite.md)| invite code, redeem table, some sass issues
 
 
 ## MVC processing
