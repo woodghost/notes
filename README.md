@@ -28,17 +28,15 @@ Today's task is to be familiar with markdown for the future usage.
 ###### This is an `<h6>` tag
 
 ### This is a third-tier heading
-==========================================================
-
-
-===============
- `=`equal mark is thin line
-
-hi hi
------
+------------------
+（This is a dash line）
 
 ------------------
 `-`dash line can make title text stronger, also, it's bold line when single used.
+
+
+ `=`equal mark is not thin line anymore
+
 
 
 You can use  one `#` all the way up to `######(in `` share the same btn with tilde(~))` six for different heading sizes.
