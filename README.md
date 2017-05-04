@@ -28,8 +28,8 @@ Today's task is to be familiar with markdown for the future usage.
 ###### This is an `<h6>` tag
 
 ### This is a third-tier heading
+==========================================================
 
-============================================
 
 ===============
  `=`equal mark is thin line
